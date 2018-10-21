@@ -1,0 +1,1490 @@
+
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+                                  display: none !important;
+        }
+
+
+        .view-animate-container {
+                                  position:relative;
+                                  height:100% !important;
+                                  /*background:white;*/
+                                  height:40px;
+                                  overflow:scroll;
+        }
+
+        .view-animate {
+                                  padding:0px;
+                                  height:100% !important;
+
+        }
+
+        .view-animate.ng-enter, .view-animate.ng-leave {
+                                  /*transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;*/
+
+                                 -webkit-transition: 800ms cubic-bezier(0.250, 0.100, 0.250, 1.000) all;
+                                 -moz-transition: 800ms cubic-bezier(0.250, 0.100, 0.250, 1.000) all;
+                                 -ms-transition: 800ms cubic-bezier(0.250, 0.100, 0.250, 1.000) all;
+                                 -o-transition: 800ms cubic-bezier(0.250, 0.100, 0.250, 1.000) all;
+                                  transition: 800ms cubic-bezier(0.250, 0.100, 0.250, 1.000) all;
+
+                                  display:block;
+                                  width:100%;
+                                  position:absolute;
+                                  top:0;
+                                  left:0;
+                                  right:0;
+                                  bottom:0;
+                                  padding:0px;
+        }
+
+        .view-animate.ng-enter {
+                                  left:100%;
+        }
+        .view-animate.ng-enter-active {
+                                  left:0;
+        }
+        .view-animate.ng-leave {
+                                left:0;
+        }
+        .view-animate.ng-leave-active {
+                                   left:-100%;
+        }
+
+
+        .login-block .no-animate {
+                                   -webkit-transition: none !important;
+                                   transition: none !important;
+        }
+
+        .toolbar{
+                                    width:100%;
+                                    height:67px;
+                                    color: #fff;
+                                    background-color: black;
+                                    overflow:hidden;
+                                    /*position:fixed;*/
+        }
+
+        .left-toolbar{
+
+
+                                    width:15%;
+                                    align:center;
+                                    border:0px;
+                                    display:inline-block;
+                                    float:left;
+                                    background-color: black;
+                                    padding:10px;
+                                    margin-top: 20px; /*saikiran*/
+        }
+
+        .top-label-toolbar{
+
+                                    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                                    font-style: normal;
+                                    font-size: 1.0em;
+                                    font-weight: normal;
+                                    text-align: center;
+                                    color: #FFD700;
+                                    margin-top: 20px; /*saikiran*/
+                                    width:70%;
+                                    border-color: yellow;
+                                    border:0px;
+                                    border-style:solid;
+                                    display:inline-block;
+                                    float:left;
+
+        }
+
+        .bottom-label-toolbar{
+
+                                    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                                    font-style: normal;
+                                    font-size: 1.1em;
+                                    text-align: center;
+                                    font-weight: normal;
+                                    color: white;
+                                    margin-top: 0px auto;
+                                    border-color: yellow;
+                                    width:100%;
+                                    border:0px;
+                                    border-style:solid;
+                                    float:left;
+        }
+
+        .right-toolbar{
+
+                                    border-style:solid;
+                                    align:center;
+                                    width:10%;
+                                    border:0px;
+                                    display:inline-block;
+                                    float:left;
+                                    padding:10px;
+                                    margin-top: 20px; /*saikiran*/
+        }
+
+        md-content.md-default-theme {
+                                    background-color: #ffff;
+        }
+
+        md-card {
+                                    background-color: #ffffff;
+
+        }
+
+        md-card .profilecardcolor{
+            background-color: #FFD700; /*#C71585;*/
+            
+        }
+      
+        md-card h2:first-of-type {
+                                     margin-top: 0;
+
+        }
+
+
+        h2 {
+                                     font-weight: 400;
+        }
+
+
+
+
+        .user-avatar {
+                                    border-radius: 99%;
+        }
+
+        .teachers-image {
+
+
+                                    border: 1px solid white;
+                                    border-radius: 50%;
+                                    width:35%;
+                                    height:20%;
+                                    margin: 5px auto;
+                                    background-position: center center;
+                                    background-repeat: no-repeat;
+
+        }
+
+
+        .face {
+
+                                      border: 1px solid white;
+                                      border-radius: 50%;
+                                      margin: 5px auto;
+                                      vertical-align: middle;
+                                      width: 25%;
+                                      height:15%;
+        }
+
+        .subhead-label {
+                                        color: #ffffff;
+                                        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                                        font-style: normal;
+                                        text-transform:none;           /* capitalize; */
+                                        font-size: 1.2em; /* 40px/16=2.5em */
+                                        background-color:gray; /*#005DB3;*/
+                                        padding: 5px 30px 25px 10px;
+                                        height: 7px;
+                                        /*border-radius: 5px;*/
+                                        margin-bottom: 1px;
+                                        margin-top: 1px;
+                                        width:auto;
+
+        }
+        .schoolmessage-body{
+                                        background-color:#ECECEC;
+        }
+        .schoolmessage-subhead-label {
+
+                                        color: #85929E;
+                                        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                                        font-style: normal;
+                                        text-transform:none;           /* capitalize; */
+                                        font-size: 0.750em; /* 40px/16=2.5em */
+                                        /*padding: 5px 30px 30px 10px;*/
+                                        height: 12px;
+                                        border-radius: 5px;
+                                        margin-bottom: 3px;
+                                        margin-top: 1px;
+                                        text-align:center;
+                                        width:auto;
+
+        }
+
+        .school-messagebox{
+
+                                        background-color: white;/*#E1F0FF;  *//*#F1F4F6;*/
+                                        border-radius: 5px;
+                                        box-shadow: 0 0 6px #B2B2B2;
+                                        padding: 10px 18px;
+                                        position: relative;
+                                        vertical-align: top;
+                                        width:90%;
+                                        margin-left:20px;
+
+
+        }
+
+        .school-messagebox:before {
+
+                                        background-color: white;/*#E1F0FF;*/  /*#F1F4F6;*/
+                                        content: "\00a0";
+                                        height: 16px;
+                                        position: absolute;
+                                        top: 11px;
+                                        transform:             rotate( 29deg ) skew( -35deg );
+                                            -moz-transform:    rotate( 29deg ) skew( -35deg );
+                                            -ms-transform:     rotate( 29deg ) skew( -35deg );
+                                            -o-transform:      rotate( 29deg ) skew( -35deg );
+                                            -webkit-transform: rotate( 29deg ) skew( -35deg );
+                                        width:  20px;
+        }
+
+        .box::before {
+                                        box-shadow: -2px 2px 2px 0 rgba( 178, 178, 178, .4 );
+                                        left: -9px;
+        }
+
+
+        .subhead-label .label{
+
+                                        display: inline-block;
+                                        color: #ffffff;
+                                        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                                        font-style: normal;
+                                        font-weight: normal;
+                                        text-transform:none;           /* capitalize; */
+                                        font-size: 1.0em; /* 40px/16=2.5em */
+                                        width:32% !important;
+        }
+
+
+        form .progress {
+                                        line-height: 15px;
+        }
+
+        .progress {
+                                        display: inline-block;
+                                        width: 100px;
+                                        border: 3px groove #CCC;
+        }
+
+        .progress div {
+                                        font-size: smaller;
+                                        background: orange;
+                                        width: 0;
+        }
+
+
+
+        [class*='-apple'] {
+                                        background-color:#005DB3;
+                                        color:#f8f8f8;
+
+        }
+
+
+
+        .pointer-hand { cursor: pointer; cursor: hand; }
+
+        .png-icon{
+                                        margin: 5px auto auto;
+                                        padding: 0;
+                                        display: inline-block;
+                                        background-repeat: no-repeat no-repeat;
+                                        pointer-events: none;
+                                        width: 24px;
+                                        height: 24px;
+                                        background-position:-136px -68px;
+
+
+        }
+
+
+        #veil {
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        height:100%;
+                                        width:100%;
+                                        cursor: not-allowed;
+                                        filter: alpha(opacity=60);
+                                        opacity: 0.2;
+                                        background: #ffffff no-repeat center;
+        }
+        #feedLoading {
+                                        position: absolute;
+                                        top:270px;
+                                        width:100%;
+                                        text-align: center;
+                                        font-size: 4em;
+                                        color:white;
+                                        text-shadow: 2px 2px 2px #021124;
+        }
+
+
+        .tableCard{
+                                        height: 50%;
+                                        width:80%;
+                                        border-radius: 2px;
+                                        display: block;
+                                        margin: auto;
+                                        box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+        }
+
+
+        .form-group .required {
+
+                                        width:100%;
+                                        margin:0 auto;
+        }
+
+        .form-group.required .field-label {
+
+
+                                        color: #005DB3;
+                                        width:40%;
+                                        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                                        font-style: normal;
+                                        font-size: 1.000em;
+                                        font-weight: normal;
+                                        padding-left: 0.8%;
+                                        padding-top: 0.5%;
+                                        padding-bottom: 0.5%;
+                                        margin:0 auto;
+                                        margin-left: .2cm;
+
+        }
+
+
+        .form-group.required .data-label {
+
+                                        display: inline-block;
+                                        white-space: nowrap;
+                                        color: #000000;
+                                        width:auto;
+                                        height:auto;
+                                        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                                        font-style: normal;
+                                        font-size: 1.000em;
+                                        font-weight: normal;
+                                        padding-left: 0.5%;
+                                        padding-top: 0.5%;
+                                        padding-bottom: 0.5%;
+                                        
+
+        }
+        
+
+        /* .form-group.required .labels {
+                                        color: #005DB3;
+                                        width:18%;
+                                        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                                        font-style: normal;
+                                        font-size: 1.3em;
+                                        font-weight: normal;
+                                        padding-left: 0.8%;
+
+
+        }
+
+
+        .form-group.required  .label-value {
+                                        color: #000000;
+                                        width:22%;
+                                        height:auto;
+                                        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                                        font-style: normal;
+                                        font-size: 1.3em;
+                                        font-weight: normal;
+                                        padding-left: 0.5%;
+
+
+        }
+
+        .toolbar-label {
+                                        color: #FFD700;
+                                        width:auto;
+                                        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                                        font-style: normal;
+                                        font-size: 1.0em;
+                                        text-align: center;
+                                        font-weight: normal;
+                                        margin-top:0px auto;
+                                        border:1px;
+                                        border-color:yellow;
+                                        border-style:solid;
+
+        }*/
+
+        .table-header {
+                                        color: black;/*#005DB3;*/
+                                        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                                        font-style: normal;
+                                        font-size: 0.9em; /*saikiran*/
+                                        font-weight: bold;
+                                        text-transform:none;
+                                        background-color:#FF9900;
+                                        
+
+
+
+
+        }
+        .login-block .footer-label {
+                                    color: #0000;
+                                    width:100%;
+                                    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                                    font-style: normal;
+                                    font-size: 1.0em;
+                                    font-weight: normal;
+                                    margin-bottom:0px;
+                                    margin-top: 0px;
+                                    position:fixed !important; /*saikiran*/
+                                    bottom:0;
+                                    padding:5px 0;
+                                    text-align: center;
+                                   /* margin-left: 20px;*/
+
+        }
+
+         .menu-label {
+                                    color: #FFFF;
+                                    width:auto;
+                                    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                                    font-style: normal;
+                                    font-size: 1.2em;
+                                    text-align: center;
+                                    font-weight: normal;
+                                    margin-top: 1px auto;
+                                    border:1px;
+                                    border-color:yellow;
+                                    border-style:solid;
+
+        }
+
+        .login-block .login-label {
+                                    color: #0000;
+                                    width:auto;
+                                    height:3%;
+                                    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                                    font-style: normal;
+                                    font-size: 2.0em;
+                                    text-align: center;
+                                    margin-bottom: 60px;
+                                    font-weight: normal;
+        }
+
+
+        .form-group.required .toolbar-menu-label {
+                                    color: #FFFF;
+                                    width:15%;
+                                    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                                    font-style: normal;
+                                    font-size: 1.1em;
+                                    text-align: center;
+                                    font-weight: normal;
+        }
+
+        .form-group.required .message-label {
+                                    color: #000000;
+                                    width:auto;
+                                    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                                    font-style: normal;
+                                    font-size: 1em;
+                                    font-size: 1.2em;
+                                    font-weight: normal;
+                                    padding: 1%;
+
+        }
+
+        .form-group.required .date-label {
+                                    color: #fff;
+                                    width:auto;
+                                    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                                    font-style: normal;
+                                    font-size: 1em;
+                                    font-size: 1em;
+                                    font-weight: normal;
+                                    background-color: #005DB3;
+                                    padding: 2px 3px 15px 3px;
+                                    height: 15px;
+                                    border-radius: 5px;
+                                    margin-bottom: 1px;
+                                    margin-top: 1px;
+
+        }
+
+        form{
+                                    width: 100%;
+                                    height: auto;
+                                    border-radius: 5px;
+                                    padding: 3px 3px 3px 3px;
+		}
+
+        .chartStyle{
+                                     height: 30%;
+                                     width: 90%;
+                                     padding: 2%;
+                                     float:center;
+        }
+
+
+		.login-block {
+
+                                    width: 100%;
+                                    height:100%;
+                                    background-color: #FFD700;/*#FF9900;*/
+                                    padding:10px;
+                                    position:fixed;
+		}
+
+
+		.login-profile-block {
+
+                                    width: 100%;
+                                    height:100%;
+                                    background-color: white;/*#FF9900;*/
+                                    padding:10px;
+        }
+
+
+        .login-profile-block button {
+
+                                    width: 100%;
+                                    height: 60px;
+                                    background-color: #005DB3;
+                                    box-sizing: border-box;
+                                    border-radius: 5px;
+                                    border: 1px solid blue;
+                                    color: #fff;
+                                    font-weight: normal;
+                                    text-transform: none;
+                                    font-size: 1.6em;
+                                    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                                    outline: none;
+                                    cursor: pointer;
+                                    margin-left: 0px;
+                                    margin-bottom: 20px;
+                                    margin-top: 4px;
+        }
+
+        .login-profile-block .input-control {
+
+                                    display: block;
+                                    width: 100%;
+                                    height: 34px;
+                                    padding: 6px 12px;
+                                    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                                    font-size: 20px;
+                                    font-weight: normal;
+                                    line-height: 1.42857143;
+                                    color: #005DB3;/*#555;*/
+                                    background-size: 16px 80px;
+                                    margin-bottom:10px;
+                                    margin-top:30px;
+                                    background-color: transparent;
+                                    border-style: solid;
+                                    border-width: 0px 0px 1px 0px;
+                                    border-color: black;/*#c0c0c0;*/
+                                    outline:0;
+                                    padding: 0 10px 0 40px;
+
+        }
+
+        .login-profile-block input#password {
+
+                                    background:  url(img/password.png) 5px top no-repeat;
+                                    background-size: 16px 80px;
+        }
+
+        .login-profile-block input#password:focus {
+
+                                    background:  url(img/password.png) 15px bottom no-repeat;
+                                    background-size: 20px 90px;
+        }
+
+
+        .login-profile-block input#retypepassword {
+
+                                    background:  url(img/password.png) 5px top no-repeat;
+                                    background-size: 16px 80px;
+        }
+
+        .login-profile-block input#retypepassword:focus {
+
+                                    background:  url(img/password.png) 15px bottom no-repeat;
+                                    background-size: 20px 90px;
+        }
+
+
+		.login-block .primary-button {
+
+                            width: 100%;
+                            height: 60px;
+                            background-color: #005DB3;
+                            box-sizing: border-box;
+                            border-radius: 5px;
+                            border: 1px solid blue;
+                            color: #fff;
+                            font-weight: normal;
+                            text-transform: none;
+                            font-size: 1.6em;
+                            font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                            outline: none;
+                            cursor: pointer;
+                            margin-left: 0px;
+                            margin-bottom: 20px;
+                            margin-top: 4px;
+        }
+        
+		.login-block .success-button {
+
+            width: 100%;
+            height: 60px;
+            background-color:#5CB85C;
+            box-sizing: border-box;
+            border-radius: 5px;
+            border: 1px solid #5CB85C;
+            color: #fff;
+            font-weight: normal;
+            text-transform: none;
+            font-size: 1.6em;
+            font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+            outline: none;
+            cursor: pointer;
+            margin-left: 0px;
+            margin-bottom: 20px;
+            margin-top: 4px;
+}
+
+
+        .login-block .input-control {
+
+                            display: block;
+                            width: 100%;
+                            height: 34px;
+                            padding: 6px 12px;
+                            font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                            font-size: 20px;
+                            font-weight: normal;
+                            line-height: 1.42857143;
+                            color: white;/*#555;*/
+                            background-size: 16px 80px;
+                            margin-bottom:10px;
+                            margin-top:30px;
+                            background-color: transparent;
+                            border-style: solid;
+                            border-width: 0px 0px 1px 0px;
+                            border-color: white;/*#c0c0c0;*/
+                            outline:0;
+                            padding: 0 10px 0 40px;
+
+        }
+
+
+        .login-block input#username {
+
+
+                            background: url(img/username.png) 5px top no-repeat;
+                            background-size: 16px 80px;
+		}
+
+		.login-block input#username:focus {
+
+
+                            background: url(img/username.png) 15px bottom no-repeat;
+                            background-size: 16px 80px;
+		}
+
+		.login-block input#password {
+
+                            background:  url(img/password.png) 5px top no-repeat;
+                            background-size: 16px 80px;
+        }
+
+        .login-block input#password:focus {
+
+                            background:  url(img/password.png) 15px bottom no-repeat;
+                            background-size: 20px 90px;
+        }
+
+
+
+
+    .login-block .maabadi-logo {
+
+                        width: 40%;
+                        height: 40px;
+                        background-color: #05CB68;
+                        box-sizing: border-box;
+                        border-radius: 5px;
+                        color: #fff;
+                        font-weight: normal;
+                        text-transform: none;
+                        font-size: 1.5em;
+                        padding:5px;
+                        margin-top:10px;
+                        text-align:center;
+                        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                        outline: none;
+                        cursor: pointer;
+
+     }
+                    /*
+
+                    #wrap {
+                                 overflow: hidden;
+                      }
+                    */
+
+    .dashboard {
+
+                      overflow: hidden;
+                      width: 100%;
+                      height:100%;
+                      padding-top: 1%;
+                      padding-bottom: 1%;
+                      padding-left: 1%;
+                      padding-right: 1%;
+                      color: #fff;
+                      background-color: white;
+                      position: relative;
+                      float: left;
+    }
+
+    .student-profile .innerContent {
+
+                      padding-left: 2px;
+                      /*padding-top: 5px;*/
+                      /*text-align: center;*/
+                      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                      font-style: normal;
+                      font-size: 1.0em;
+                      font-weight: normal;
+                     
+    }
+
+    .imageContent {
+
+                       padding-left: 60px;
+                       padding-top: 10px;
+                       float:center;
+                       position: relative;
+
+    }
+    .small-imageContent {
+
+                       padding-left: 20px;
+                       padding-top: 10px;
+                       float:center;
+                       position: relative;
+    }
+
+    .large-imageContent {
+
+                       padding-left: 60px;
+                       padding-top: 30px;
+                       float:center;
+                       position: relative;
+    }
+
+
+     .student-academics .innerContent {
+
+                       padding-left: 2px;
+                       /*padding-top: 5px;*/
+                       /*text-align: center;*/
+                       font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                       font-style: normal;
+                       font-size: 1.0em;
+                       font-weight: normal;
+
+     }
+
+
+      .student-diary .innerContent {
+
+                        padding-left: 2px;
+                        /*padding-top: 5px;*/
+                        /*text-align: center;*/
+                        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                        font-style: normal;
+                        font-size: 1.0em;
+                        font-weight: normal;
+
+      }
+
+
+       .reports .innerContent {
+
+                         padding-left: 2px;
+                         /*padding-top: 5px;*/
+                         /*text-align: center;*/
+                         font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                         font-style: normal;
+                         font-size: 1.0em;
+                         font-weight: normal;
+
+       }
+
+        .school-message .innerContent {
+
+                          padding-left: 2px;
+                          /*padding-top: 5px;*/
+                          /*text-align: center;*/
+                          font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                          font-style: normal;
+                          font-size: 1.0em;
+                          font-weight: normal;
+
+        }
+
+
+        .exam-calendar .innerContent {
+
+                          padding-left: 2px;
+                          /*padding-top: 5px;*/
+                          /*text-align: center;*/
+                          font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                          font-style: normal;
+                          font-size: 1.0em;
+                          font-weight: normal;
+
+        }
+
+
+        .subjects .innerContent {
+
+                          padding-left: 2px;
+                          /*padding-top: 5px;*/
+                          /*text-align: center;*/
+                          font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                          font-style: normal;
+                          font-size: 1.0em;
+                          font-weight: normal;
+
+         }
+
+        .attendance .innerContent {
+
+                        padding-left: 2px;
+                        /*padding-top: 5px;*/
+                        /*text-align: center;*/
+                        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                        font-style: normal;
+                        font-size: 0.8em;
+                        font-weight: normal;
+
+                    }
+
+
+     .innerContent-lg
+      {
+
+                      text-align: center;
+                      margin-bottom: 20%;
+
+
+        }
+
+     .dashboard .dashboard-logo {
+
+                        /*position:fixed;*/
+                        width: 100%;
+                        height: 18% !important;
+                        border: 2px solid white;
+                        background-color: #32CD32;
+     }
+
+    .dashboard-logo .image-data{
+
+                        width: 100%;
+                        height: 100% !important;
+
+     }
+     .login-logo {
+
+                        border: 1px solid white;
+                        border-radius: 50%;
+                        width:40%;
+                        height:25%;
+                        margin: 8px auto;
+                        background-position: center center;
+                        background-repeat: no-repeat;
+
+      }
+
+     .student-image {
+
+                        border: 1px solid white;
+                        border-radius: 50%;
+                        width:40%;
+                        height:25%;
+                        margin: 5px auto;
+                        background-position: center center;
+                        background-repeat: no-repeat;
+
+      }
+
+
+
+
+    .empty-student-image {
+                          border: 1px solid white;
+                          border-radius: 50%;
+                          width:40%;
+                          height:25%;
+                          margin: 5px auto;
+                          background: url(img/empty_person.png) no-repeat;
+                          background-position: top center;
+                          background-repeat: no-repeat;
+    }
+
+
+
+    .dashboard .student-profile {
+                        float: left;
+                        text-align: bottom;
+                        width: 50%;
+                        height: 15%;
+                        background-color: #C71585;
+                        border: 2px solid white;
+
+    }
+
+    .dashboard .student-diary{
+
+                        float: left;
+                        width: 50%;
+                        height: 25%;
+                        background-color: #20B2AA;
+                        border: 2px solid white;
+
+    }
+
+
+    .dashboard .school-message{
+                        float: left;
+                        width: 50%;
+                        height: 15%;
+                        background-color: #32CD32;
+                        border: 2px solid white;
+
+
+    }
+
+    .dashboard .subjects {
+                        float: left;
+                        width: 25%;
+                        height: 15%;
+                        background-color: #FF9900;
+                        border: 2px solid white;
+
+
+    }
+
+
+
+    .dashboard .attendance{
+                        float: right;
+                        width: 25%;
+                        height: 15%;
+                        background-color: #1E90FF;
+                        border: 2px solid white;
+                        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                        font-style: normal;
+                        font-size: 1.2em;
+                        font-weight: normal;
+                        color: #fff;
+
+    }
+
+    .dashboard .student-academics {
+                        float: right;
+                        width: 50%;
+                        height: 25%;
+                        background-color: #2F4F4F;
+                        border: 2px solid white;
+
+
+    }
+
+    .dashboard .reports {
+                        float: right;
+                        width: 50%;
+                        height: 15%;
+                        background-color: #FFD700;
+                        border: 2px solid white;
+
+
+    }
+    .dashboard .exam-calendar {
+                        float: right;
+                        width: 50%;
+                        height: 30%;
+                        background-color: #8A2BE2;
+                        border: 2px solid white;
+
+
+    }
+    .items-wrap {
+                        position: absolute;
+                        width: auto;
+                        height: auto;
+                        overflow: scroll;
+    }
+
+
+    .attendance-date{
+
+                        width:35%;
+                        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                        font-style: normal;
+                        font-size: 0.9em;
+                        font-weight: normal;
+
+
+
+    }
+    .attendance-present{
+                        width:35%;
+                        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                        font-style: normal;
+                        font-size: 0.9em;
+                        font-weight: normal;
+
+    }
+
+    .attendance-absent{
+
+                        width:35%;
+                        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                        font-style: normal;
+                        font-size: 0.9em;
+                        font-weight: normal;
+                        color: red;
+    }
+
+
+
+    .sidenav {
+
+                        height: 100%;
+                        width: 0;
+                        position: fixed;
+                        z-index: 1;
+                        top: 0;
+                        left: 0;
+                        background-color: #111;
+                        overflow-y: scroll; /*saikiran*/
+                        -webkit-overflow-scrolling: touch; /*saikiran*/
+                        transition: 0.5s;
+                        
+
+
+    }
+
+
+    .closebtn {
+
+                        position: absolute;
+                        top: 0;
+                        right: 25px;
+                        font-size: 36px !important;
+                        margin-left: 5px;
+    }
+
+    #main {
+
+                        transition: margin-left .5s;
+                        position:fixed;
+                        width:100%;
+                        height:100%;
+                        /*saikiran*/
+/*                        overflow-y: scroll;*/
+/*                        -webkit-overflow-scrolling: touch;*/
+
+    }
+
+    /*
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }*/
+
+    .sidenav-toolbar{
+                         background-color: #005DB3;
+    }
+
+    .sidenav-listitems{
+
+                        /*transition: margin-right .5s;*/
+                       /* position:absolute;*/
+                        display: inline-block;
+                        white-space: nowrap;
+                        height:40px;
+                        /*width:100%;*/
+                        color: white;
+                        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                        font-style: normal;
+                        font-size: 1.2em;
+                        font-weight: normal;
+                       
+    }
+
+    .sidenav-listitems .loginDate{
+
+                        color: white;
+                        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                        font-style: normal;
+                        font-size: 0.8em;
+                        font-weight: normal;
+                        padding-left:2px;
+    }
+
+
+    .datetime{
+
+                        color: /*#85929E;*/#A52A2A;
+                        /*display: inline-block;*/
+                        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                        font-style: normal;
+                        font-size: 0.9em;
+                        font-weight: normal;
+                        margin-left:0px;
+                        /*padding-right:3px;*/
+                        /*text-align: center;*/
+                       /* float:center;*/
+
+    }
+
+    p{
+
+                        color: #85929E;/*#A52A2A;*/
+                        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                        font-style: normal;
+                        font-size: 0.9em;
+                        font-weight: normal;
+                        padding-right:3px;
+                        float:right;
+
+    }
+
+
+    .schoolmessage{
+
+                        display: inline-block;
+                        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                        font-style: normal;
+                        font-size: 1.0em;
+                        font-weight: normal;
+                        padding-left:5px;
+                        padding-top:5px;
+                        text-align: left;
+
+    }
+
+
+    .rounded-corners {
+
+                        margin-top:0px;
+                        margin-bottom:0px;
+                        /*border-radius: 10px;*/
+                        background: #FFD700;/*#8B0000;/* #ff4000;*//*#DC143C;*/  /*#73AD21;*/ /*saikiran*/
+                        padding: 10px;
+                        width: 100%;
+                        height: 100px;
+    }
+
+
+    .rounded-corners .field-label {
+
+                        color: black; /*white; /*#005DB3;*/ /*saikiran*/
+                        width:40%;
+                        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                        font-style: normal;
+                        font-size: 1.0em; /*saikiran*/
+                        font-weight: normal;
+                        padding-left: 0.3%;
+                        padding-top: 0.2%;
+                        margin:0 auto;
+
+    }
+
+    .rounded-corners .data-label {
+
+                        color: black;/*white;*/ /*saikiran*/
+                        width:60%;
+                        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                        font-style: normal;
+                        font-size: 1.0em; /*saikiran*/
+                        font-weight: normal;
+                        padding-left: 0.3%;
+                        padding-top: 0.2%;
+
+    }
+
+
+    .teachers {
+
+                        margin-top:0px;
+                        margin-bottom:0px;
+                        display: inline-block;
+                        background: #FF9900;  /*#2E322F;*/ /*#8B0000;*//* #ff4000;*//*#DC143C;*/  /*#73AD21;*/
+                        padding: 5px;
+                        width: 100%;
+                        height: auto;
+                        border-radius:5px;
+
+
+    }
+
+    .teachers .field-label {
+
+                        display: inline-block;
+                        color: white; /*#005DB3;*/
+                        width:30%;
+                        height:auto;
+                        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                        font-style: normal;
+                        font-size: 1.3em;
+                        font-weight: normal;
+                       /* padding-left: 0.3%;*/
+                        padding-top: 0.2%;
+                        margin:0 auto;
+
+    }
+
+    .teachers .data-label {
+
+                        display: inline-block;
+                        white-space: nowrap;
+                        color: white;
+                        width:70%;
+                        height:auto;
+                        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                        font-style: normal;
+                        font-size: 1.2em;
+                        font-weight: normal;
+                        padding-left: 0.3%;
+                        padding-top: 0.2%;
+
+    }
+
+
+    .container {
+
+                      position: absolute;
+                      top: 0;
+                      bottom: 45px;
+                      overflow: auto;
+                      overflow-x: hidden;
+                      width: 100%;
+    }
+
+
+    .parent-message{
+
+                        margin-top:80%;
+                        width: 100%;
+                        display: inline-block;
+                        position: fixed;
+                        padding: 2px 2px;
+                        bottom: 0;
+    }
+
+     .input-parentmessage {
+
+                        display: inline-block;
+                        width: 90%;
+                        height: 34px;
+                        padding: 6px 12px;
+                        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                        font-size: 20px;
+                        font-weight: normal;
+                        line-height: 1.42857143;
+                        background-size: 16px 80px;
+                        margin-bottom:10px;
+                        margin-top:30px;
+                        margin-right:10px;
+                        background-color: transparent;
+                        border-style: solid;
+                        border-width: 0px 0px 1px 0px;
+                        border-color: black;/*#c0c0c0;*/
+                        outline:0;
+
+                       /* padding: 0 10px 0 40px;*/
+
+    }
+
+    .scroll
+    {
+                            height: 300px;
+                            overflow-x: auto;
+                            position:fixed;
+    }
+
+    .content
+    {
+                            direction: ltr;
+    }
+
+    .switch-student{
+
+                            display: inline-block;
+                            color: white;
+                            width:100%;
+                            height:auto;
+                            font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                            font-style: normal;
+                            font-size: 1.2em;
+                            font-weight: normal;
+                            padding: 20px;
+                            background-color: #FF9900;
+                            border-radius:5px;
+    }
+
+
+
+
+    .wrap {
+                           /* margin: 8px;*/
+                           height: 100%;
+                           width: 100%;
+                           /*saikiran*/
+/*                           display: flex;*/
+/*                           flex-direction: column;*/
+    }
+    .container-parent {
+                            flex: 1 1 auto;
+                            display: flex;
+                            flex-direction: column;
+                            height: 100%;    /*100%;*/
+                            background-color: white;
+                            border: 1px solid #ccc;
+                            overflow-y: auto;
+                            
+    }
+    .form { flex: 0 0 32px; display: flex; border: 1px solid white; }
+    .form > input[type=text]
+    {
+                            font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                            font-style: normal;
+                            font-size: 1.3em;
+                            font-weight: normal;
+                            flex: 1 1 auto;
+                            border-radius: 5px;
+                            border: 1px solid black;
+                            height:45px;
+                            margin-right:1px;
+                            padding-left:3px;
+    }
+    .form > input[type=button]
+    {
+                            font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                            font-style: normal;
+                            font-size: 1.3em;
+                            font-weight: normal;
+                            flex: 0 0 20%;
+                            border: 1px #005DB3;
+                            height:45px;
+                            color:white;
+                            border-radius: 5px;
+                            background-color: #005DB3;
+    }
+    .bubble { flex: 1 1 auto; clear: both; } /* clear the floats here on parent */
+    .bubble p {
+
+                            font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                            font-style: normal;
+                            font-size: 1.0em;
+                            font-weight: normal;
+                            border-radius: 5px;
+                            padding: 1px 10px 2px;
+                            margin: 8px 12px;
+                            max-width: 80%;  /* this will make it not exceed 80% and then wrap */
+                            position: relative;
+                            transition: background-color 0.5s;
+                            margin-bottom: 2px;
+                           
+    }
+    .left p
+    {
+                            font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                            font-style: normal;
+                            font-size: 0.7500em;
+                            font-weight: normal;
+                            
+                            background-color: #ccc; color: #fff; float: left;
+    } /* floated left */
+    .right p
+    {
+                            font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                            font-style: normal;
+                            font-size: 0.7500em;
+                            font-weight: normal;
+                           
+                            background-color: #005DB3; color: #fff; float: right;
+    }
+
+
+    .container-parent .table-data-label {
+        
+        display: inline-block;
+/*        white-space: nowrap;*/
+        color: #000000;
+        width:auto;
+        height:auto;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        font-style: normal;
+        font-size: 0.9em;
+        font-weight: normal;
+
+        
+        
+    }
+
+    .login-hint {
+        /*  color: #0266C8; */
+         color:red;
+        /*  max-width:66%; */
+         font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+         font-style: normal;
+         /* font-variant: small-caps; */
+        /*  text-transform: capitalize; */
+         font-size: 1em; /* 40px/16=2.5em */
+        /*  font-weight: bold; */
+         /* background-color:white; */
+            /* padding: 3px; */
+            /* height: 25px; */
+            /* border-radius: 5px; */
+            /* margin-bottom: 15px; */
+         /* width:auto; */
+        
+     }
+
+    /* floated right */
+    /* classes below are only for arrows, not relevant */
+    /*.left p::before
+    {
+                            content: ''; position: absolute;
+                            width: 0; height: 0; left: -8px; top: 8px;
+                            border-top: 4px solid transparent;
+                            border-right: 8px solid #ccc;
+                            border-bottom: 4px solid transparent;
+    }
+    .right p::after
+    {
+                            content: ''; position: absolute;
+                            width: 0; height: 0; right: -8px; bottom: 8px;
+                            border-top: 4px solid transparent;
+                            border-left: 8px solid #33c;
+                            border-bottom: 4px solid transparent;
+    }*/
+
+
+   

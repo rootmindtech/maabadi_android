@@ -1,0 +1,119 @@
+
+<div  ng-controller="studentDiaryController" ng-init="fetchStudentDiary_M()" ng-cloak>
+
+	<div layout="row" class="toolbar" class="view-animate">
+
+                <div>
+                    <button layout="column" flex class="left-toolbar" ng-click="backToDashBoard('dashBoard')">
+                        
+                        <img src="app/images/back.png">
+                            
+                            </button>
+                </div>
+
+
+				<div layout="column" flex align="center" class="top-label-toolbar">
+
+						<label >{{studentTitleName}} </label>
+
+						<div flex align="center" class="bottom-label-toolbar">
+
+							<label class="bottom-label-toolbar">Student diary</label>
+
+						</div>
+
+				</div>
+
+				<div layout="column" flex class="right-toolbar" ng-click="logout()">
+
+						<img class="png-icon" src="app/images/logout.png">
+
+				</div>
+
+
+	</div>
+
+    <md-card>
+            <div class="rounded-corners">
+
+
+
+                            <label class="field-label" >Academic Year</label><label class="data-label" flex>: {{academicYearIDValue}} </label>
+
+
+                            <label class="field-label"  >Class</label><label class="data-label" flex>: {{gradeIDValue}} </label>
+
+
+
+                            <label class="field-label"  >Section</label><label class="data-label" flex>: {{sectionIDValue}} </label>
+
+
+            </div>
+
+
+        <div class="wrap">
+            <div id="chatWindow" class="container-parent">
+                
+                
+                <md-content>
+                    <md-list>
+                        
+                        <div ng-repeat="(key, value) in wrapper | groupBy: 'diaryDateMMM' | toArray:true">
+
+                        <div class="subhead-label" ng-show="!wrapper.length">
+
+                            No info available
+                        </div>
+
+
+                        <div class="subhead-label">
+                             {{value[0].diaryDateMMM}}
+                        </div>
+
+                        <table class="table table-striped table-hover table-bordered">
+                            <thead>
+                            <tr>
+                                <th align="center" class="table-header">Subject</th>
+                                <th align="center" class="table-header">Message</th>
+
+                            </tr>
+                            </thead>
+                            
+                            <tbody>
+
+
+                            <tr ng-repeat="wrapper in value">
+                                
+                                    <td >{{wrapper.subjectIDValue}}</td>
+                                    <td class="schoolmessage">{{wrapper.message}} <p class="datetime" align="right"> {{wrapper.messageDateTime.slice(11,20)}}</p></td>
+
+
+                            </tr>
+
+                            </tbody>
+
+                        </table>
+                        <!--<md-content>
+                        <md-list  ng-repeat="wrapper in value" ng-cloak>
+                            
+                           
+                            <md-list-item class="md-3-line" >
+                                
+                                <div class="md-list-item-text" layout="column">
+                                    <h6>{{wrapper.subjectIDValue}}</h6>
+                                    <p>{{wrapper.message}}</p>
+                                    <p>{{wrapper.messageDateTime.slice(11,20)}}</p>
+                                </div>
+                            </md-list-item>
+                            
+                        </md-list>
+                        </md-content>-->
+
+                    </div>
+                </md-list>
+            </md-content>
+            </div>
+        </div>
+
+    </md-card>
+</div>

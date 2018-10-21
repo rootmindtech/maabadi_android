@@ -1,0 +1,201 @@
+<div  ng-controller="appController_m" ng-cloak flex>
+
+
+
+	<div layout="row" class="toolbar">
+
+
+				<div layout="column" flex class="left-toolbar" ng-click="openNav()">
+                      
+						<img class="png-icon"  src="app/images/menu.png">
+                        
+
+				</div>
+                
+                
+
+
+				<div layout="column" flex align="center" class="top-label-toolbar">
+
+					<label>{{studentTitleName}} </label>
+
+					<div flex align="center" class="bottom-label-toolbar">
+
+						<label class="bottom-label-toolbar">{{menuName}}</label>
+
+					</div>
+
+				</div>
+
+				<!--<div layout="column" flex align="center" class="top-label-toolbar">
+
+
+
+							<div class="wrapper">
+								<div class="wrapper-content">
+
+
+									<div  ng-repeat="list in studentListWrapper">
+
+
+													<ul>
+
+														<a ><li>  {{list.studentName.slice(0,20)}}</li></a>
+													</ul>
+
+									</div>
+
+								</div>
+								<div class="parent">{{studentTitleName}} <span class="caret"></span></div>
+							</div>
+
+
+				</div>-->
+				<div layout="column" flex class="right-toolbar" ng-click="logout()">
+
+					<img class="png-icon"  src="app/images/power.png">
+
+				</div>
+
+
+</div>
+
+			<!--<div style="height: 100px">
+
+						<uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides" ?>
+							<uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+								<img ng-src="{{slide.image}}" style="margin:auto;">
+
+							</uib-slide>
+						</uib-carousel>
+
+			</div>-->
+
+
+		<div class="dashboard" >
+
+
+					<!--<img ng-if="defaultImageView" class="dashboard-logo" ng-src="{{defaultImage}}">-->
+
+					<!--<div  ng-controller="loginController_m" >
+								<uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+
+										<uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+
+												<img class="dashboard-logo" ng-src="data:image/JPEG;base64,{{slide.image}}">
+
+										</uib-slide>
+
+
+								</uib-carousel>
+					</div>-->
+
+						<div class="dashboard-logo" ng-controller="loginController_m">
+
+										<uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+
+											<uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+
+												<img class="image-data" ng-src="{{slide.image}}">
+												<!--<img class="image-data" ng-src="data:image/JPEG;base64,{{slide.image}}">-->
+
+											</uib-slide>
+
+
+										</uib-carousel>
+
+
+						</div>
+
+							<div class="student-profile" ng-click="activityMode('UPDATE','studentProfile')">
+
+											<div class="innerContent">student profile</div>
+
+											<div class="imageContent" >
+													<img src="app/images/studentprofile.png">
+											</div>
+
+							</div>
+
+							<div class="student-academics" ng-click="activityMode('UPDATE','studentAcademics')">
+
+									<div class="innerContent">student academics</div>
+
+									<div class="large-imageContent" >
+										<img src="app/images/studentacademics.png">
+									</div>
+							</div>
+
+							<div class="student-diary" ng-click="activityMode('UPDATE','studentDiary')">
+
+									<div class="innerContent">student diary</div>
+
+									<div class="small-imageContent">
+										<img src="app/images/studentdiary.png">
+									</div>
+
+							</div>
+
+							<div class="reports" >
+
+									<!-- ng-click="activityMode('UPDATE','reports')" -->
+
+									<div class="innerContent">
+										reports
+									</div>
+
+									<div class="imageContent" >
+										<img src="app/images/studentreports.png">
+									</div>
+
+							</div>
+
+							<div class="school-message" ng-click="activityMode('UPDATE','schoolMessage')">
+
+
+									<div class="innerContent">
+										school message
+									</div>
+
+									<div class="imageContent" >
+										<img src="app/images/schoolmessage.png">
+									</div>
+
+							</div>
+
+							<div class="exam-calendar" ng-click="activityMode('UPDATE','examCalendar')">
+
+									<div class="innerContent">exam calendar</div><br>
+
+									<div class="large-imageContent">
+											<img src="app/images/studentcalendar.png">
+									</div>
+
+							</div>
+
+							<div class="subjects" ng-click="activityMode('UPDATE','studentSubjects')">
+
+									<div class="innerContent">
+										subjects
+									</div>
+
+									<div class="small-imageContent">
+										<img src="app/images/studentsubjects.png">
+									</div>
+
+							</div>
+
+							<div class="attendance" ng-click="activityMode('UPDATE','studentAttendance')">
+
+									<div class="innerContent">
+										attendance
+									</div>
+
+									<div class="small-imageContent">
+										<img src="app/images/studentattendance.png">
+									</div>
+
+							</div>
+				</div>
+
+</div>

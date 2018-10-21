@@ -1,0 +1,160 @@
+<div ng-controller="studentAcademicsController" ng-init="loadScholastic()" ng-cloak flex>
+
+    <div layout="row" class="toolbar" class="view-animate">
+
+
+
+            <button layout="column" flex class="left-toolbar" ng-click="backToDashBoard('dashBoard')">
+                
+                <img src="app/images/back.png">
+                    
+                    </button>
+
+
+
+        <div layout="column" flex align="center" class="top-label-toolbar">
+
+            <label>{{studentTitleName}} </label>
+
+            <div flex align="center" class="bottom-label-toolbar">
+
+                    <label class="bottom-label-toolbar">Scholastic</label>
+
+            </div>
+
+        </div>
+
+        <div layout="column" flex class="right-toolbar" ng-click="logout()">
+
+
+            <img class="png-icon" src="app/images/logout.png">
+        </div>
+
+
+    </div>
+
+    <md-card>
+        <div class="rounded-corners" >
+
+            <label class="field-label" >Academic Year</label><label class="data-label" flex>: {{academicYearIDValue}} </label>
+
+            <label class="field-label"  >Class</label><label class="data-label" flex>: {{gradeIDValue}} </label>
+
+            <label class="field-label"  >Section</label><label class="data-label" flex>: {{sectionIDValue}} </label>
+
+        </div>
+    
+
+    <div class="wrap">
+        <div id="chatWindow" class="container-parent">
+        
+        
+            <md-content>
+                <md-list>
+
+                <div class="subhead-label" >
+
+                    Term-1
+                </div>
+
+                <table class="table table-striped table-hover table-bordered">
+
+                    <thead>
+                            <tr>
+                                    <th align="center" class="table-header" style="width:5%">Subject Name</th>
+                                    <th align="center" class="table-header" style="width:5%">FA1 10%</th>
+                                    <th align="center" class="table-header" style="width:5%">FA2 10%</th>
+                                    <th align="center" class="table-header" style="width:4%">SA1 30%</th>
+                                    <th align="center" class="table-header" style="width:3%">Total 50%</th>
+
+                            </tr>
+                    </thead>
+                    <tbody>
+                            <tr ng-repeat="list in wrapper">
+
+                                    <td align="left" class="table-data-label" style="width:5%">{{list.subjectIDValue}}</td>
+                                    <td align="center" class="table-data-label" style="width:5%">{{list.fa1SecuredMarks}}</td>
+                                    <td align="center" class="table-data-label" style="width:5%">{{list.fa2SecuredMarks}}</td>
+                                    <td align="center" class="table-data-label" style="width:4%">{{list.sa1SecuredMarks}} </td>
+                                    <td align="center" class="table-data-label" style="width:3%">{{list.term1Total}}</td>
+
+                            </tr>
+                    </tbody>
+                </table>
+
+
+                <div class="subhead-label" >
+
+                    Term-2
+                </div>
+
+
+                <table class="table table-striped table-hover table-bordered">
+
+                    <thead>
+                    <tr>
+                        <th align="center" class="table-header" style="width:5%">Subject Name</th>
+                        <th align="center" class="table-header" style="width:5%">FA3 10%</th>
+                        <th align="center" class="table-header" style="width:5%">FA4 10%</th>
+                        <th align="center" class="table-header" style="width:4%">SA2 30%</th>
+                        <th align="center" class="table-header" style="width:3%">Total 50%</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="list in wrapper">
+
+                        <td align="left" class="table-data-label" style="width:5%">{{list.subjectIDValue}}</td>
+                        <td align="center" class="table-data-label" style="width:5%">{{list.fa3SecuredMarks}}</td>
+                        <td align="center" class="table-data-label" style="width:5%">{{list.fa4SecuredMarks}}</td>
+                        <td align="center" class="table-data-label" style="width:4%">{{list.sa2SecuredMarks}} </td>
+                        <td align="center" class="table-data-label" style="width:3%">{{list.term2Total}}</td>
+
+                    </tr>
+                    </tbody>
+                </table>
+
+
+                <div class="subhead-label" >
+                            Final Assessment
+                </div>
+
+
+                <table class="table table-striped table-hover table-bordered">
+
+                    <thead>
+                    <tr>
+                        <th align="center" class="table-header" style="width:5%">Subject Name</th>
+                        <th align="center" class="table-header" style="width:5%">FA 40%</th>
+                        <th align="center" class="table-header" style="width:5%">SA 60%</th>
+                        <th align="center" class="table-header" style="width:4%">Total 100%</th>
+                        <th align="center" class="table-header" style="width:3%">Grade Point</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="list in wrapper">
+
+                        <td align="left" class="table-data-label" style="width:5%">{{list.subjectIDValue}}</td>
+                        <td align="center" class="table-data-label" style="width:5%">{{list.finalFATotal}}</td>
+                        <td align="center" class="table-data-label" style="width:5%">{{list.finalSATotal}}</td>
+                        <td align="center" class="table-data-label" style="width:4%">{{list.finalOverallTotal}} </td>
+                        <td align="center" class="table-data-label" style="width:3%">{{list.gradePoint}}</td>
+
+                    </tr>
+                    </tbody>
+                </table>
+                
+                </md-list>
+                </md-content>
+
+    
+            </div>
+
+        </div>
+
+    </md-card>
+</div>
+
+
+

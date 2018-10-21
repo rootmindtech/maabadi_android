@@ -1,0 +1,59 @@
+ <div ng-controller="loginProfileController" flex ng-cloak>
+
+
+	 <div layout="row" class="toolbar">
+
+
+		 <button layout="column" flex class="left-toolbar" ng-click="backToDashBoard('dashBoard')">
+
+			 <img src="app/images/back.png">
+
+		 </button>
+
+		 <div layout="column" flex align="center" class="top-label-toolbar">
+
+			 <label >{{studentTitleName}} </label>
+
+			 <div flex align="center" class="bottom-label-toolbar">
+
+				 <label class="bottom-label-toolbar">Change password</label>
+
+			 </div>
+
+		 </div>
+
+		 <div layout="column" flex class="right-toolbar" ng-click="logout()">
+
+			 <img class="png-icon"  src="app/images/logout.png">
+		 </div>
+
+
+	 </div>
+
+
+
+	 <div class="login-profile-block">
+
+
+		 <form id="form" name="form" novalidate >
+   
+  							<div>
+
+								<input type="password" class="input-control"  placeholder="Enter New Password" id="password" name="password" ng-model="wrapper.password" required/>
+
+							</div>
+
+							<div>
+
+								<input type="password" class="input-control" placeholder="Enter Retype Password" id="retypepassword" name="retypepassword" ng-model="wrapper.retypepassword" required/>
+
+							</div>
+
+			                <button  ng-click="saveData()" ng-disabled="buttonDisabled" class="btn btn-primary">Submit</button>
+
+   			 </form>
+
+	 </div>
+   
+</div> 
+

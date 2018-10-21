@@ -1,0 +1,531 @@
+
+
+<div ng-controller="studentProfileController" ng-init="loadStudentProfile();" ng-cloak flex>
+
+
+
+
+
+	<div layout="row" class="toolbar" class="view-animate">
+`
+
+                <button layout="column" flex class="left-toolbar" ng-click="backToDashBoard('dashBoard')">
+
+                    <img src="app/images/back.png">
+
+            </button>
+            
+
+			<div layout="column" flex align="center" class="top-label-toolbar">
+
+				<label >{{studentTitleName}} </label>
+
+				<div flex align="center" class="bottom-label-toolbar">
+
+					<label class="bottom-label-toolbar">Student profile</label>
+
+				</div>
+
+			</div>
+
+			<div layout="column" flex class="right-toolbar" ng-click="logout()">
+
+				<!--<img src="app/images/menu.png">-->
+				<img class="png-icon"  src="app/images/logout.png">
+			</div>
+
+
+	</div>
+    <md-card >
+        <div class="profilecardcolor">
+            
+                <div align="center" ng-if="profileImage"><img class="student-image" id="img" ng-src="{{image}}"></div>
+                <!-- data:image/JPEG;base64, -->
+                <div align="center" ng-if="!profileImage" class="empty-student-image"></div>
+                
+
+                <div class="form-group required" layout="row" flex>
+                    <div flex>
+                      <center>  <label>{{wrapper.studentName.slice(0,20)}} {{wrapper.surname.slice(0,20)}}</label></center>
+                    
+                    </div>
+                    <div flex>
+                        <center><label><span>Student id</span> {{wrapper.studentID}}</label></center>
+                    </div>
+                </div>
+
+
+            
+        </div>
+        
+        <div class="wrap">
+            <div id="chatWindow" class="container-parent">
+
+             <md-content >
+              <md-list>
+                  
+                  <div class="subhead-label">
+                      
+                      Personal Details
+                  </div>
+                  
+                    <div class="form-group required" layout="row" flex>
+                        <div  layout="row" flex>
+                            <label class="field-label" flex>Gender </label> :<label class="data-label" flex>{{wrapper.genderValue}}</label>
+                        </div>
+                    </div>
+                    <md-divider></md-divider>
+                   
+
+                    <div class="form-group required" layout="row" flex>
+                        <div  layout="row" flex>
+                            <label class="field-label" flex>Date Of Birth </label> :<label class="data-label" flex>{{wrapper.dobMMM}}</label>
+                        </div>
+                    </div>
+
+                    <md-divider></md-divider>
+
+                    <div class="form-group required" layout="row" flex>
+
+                        <div  layout="row" flex>
+                                <label class="field-label" flex>Class </label>:<label class="data-label" flex> {{wrapper.gradeIDValue}}</label>
+                        </div>
+                    </div>
+
+                    <md-divider></md-divider>
+
+                    <div class="form-group required" layout="row" flex>
+                        <div  layout="row" flex>
+                            <label class="field-label" flex>Admission No</label>:<label class="data-label" flex> {{wrapper.admissionNo}}</label>
+                        </div>
+                    </div>
+
+                    <md-divider></md-divider>
+
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>Section </label>:<label class="data-label" flex>  {{wrapper.sectionIDValue}}</label>
+                    </div>
+
+
+                    <md-divider></md-divider>
+
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>Academic Year</label> :<label class="data-label" flex> {{wrapper.academicYearIDValue}}</label>
+                    </div>
+
+                    <md-divider></md-divider>
+
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>Joining Date</label><label class="data-label" flex>  :{{wrapper.joinDateMMM}}</label>
+                    </div>
+
+                    <md-divider></md-divider>
+
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>Religion</label><label class="data-label" flex>  :{{wrapper.religionValue}}</label>
+                    </div>
+
+
+                    <md-divider></md-divider>
+
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>Caste</label><label class="data-label" flex>  :{{wrapper.casteValue}}</label>
+                    </div>
+
+                    <md-divider></md-divider>
+
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>Category</label><label class="data-label" flex>  :{{wrapper.casteCategoryValue}}</label>
+                    </div>
+
+                    <md-divider></md-divider>
+
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>Blood Group</label><label class="data-label" flex>  :{{wrapper.bloodGroupValue}}</label>
+                    </div>
+
+
+
+                    <md-divider></md-divider>
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>Physically Challenged</label><label class="data-label" flex>  :{{wrapper.physicallyChallengedValue}}</label>
+                    </div>
+
+                    <md-divider></md-divider>
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>Aaadhaar No</label><label class="data-label" flex>  :{{wrapper.aadhaarNo}}</label>
+                    </div>
+
+                    <md-divider></md-divider>
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>Ration No</label><label class="data-label" flex>  :{{wrapper.rationCardNo}}</label>
+                    </div>
+
+                    <md-divider></md-divider>
+
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>Bank Ac No</label><label class="data-label" flex>  :{{wrapper.bankAccountNo}}</label>
+                    </div>
+
+                    <md-divider></md-divider>
+
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>Bank Name</label><label class="data-label" flex>  :{{wrapper.bankNameValue}}</label>
+                    </div>
+
+                    <md-divider></md-divider>
+
+                    <div class="form-group required" layout="row" flex><!--     -->
+                        <label class="field-label" flex>Student Email</label><label class="data-label" flex>  :{{wrapper.studentEmail}}</label>
+                    </div>
+
+                    <md-divider></md-divider>
+
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>Identity Mark1</label><label class="data-label" flex>  :{{wrapper.identityMark1.slice(0,20)}}</label>
+                    </div>
+
+                    <md-divider></md-divider>
+
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>Identity Mark2</label><label class="data-label" flex>  :{{wrapper.identityMark2.slice(0,20)}}</label>
+                    </div>
+
+            <!--<md-divider></md-divider>
+
+            <div class="form-group required" layout="row" flex>
+                <label class="field-label" flex>Date Of Birth In Words</label><label class="data-label" flex>  :{{wrapper.dobInWords}}</label>
+            </div>-->
+
+
+            <!--<div class="subhead-label">
+
+                <label >Identification Details</label>
+
+            </div>
+
+
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>Aaadhaar No</label><label class="data-label" flex>  :{{wrapper.aadhaarNo}}</label>
+                    </div>
+
+                    <md-divider></md-divider>
+
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>Emirates ID</label><label class="data-label" flex>  :{{wrapper.emiratesID}}</label>
+                    </div>
+
+                    <md-divider></md-divider>
+
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>Visa No</label><label class="data-label" flex>  :{{wrapper.visaNo}}</label>
+                    </div>
+
+
+                    <md-divider></md-divider>
+
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>UID No</label><label class="data-label" flex>  :{{wrapper.uidNo}}</label>
+                    </div>
+
+
+                    <md-divider></md-divider>
+
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>Passport No</label><label class="data-label" flex>  :{{wrapper.passportNo}}</label>
+                    </div>
+
+
+                    <md-divider></md-divider>
+
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>Passport Issue Date</label><label class="data-label" flex>  :{{wrapper.passportIssueDateMMM}}</label>
+                    </div>
+
+                    <md-divider></md-divider>
+
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>Passport Expiry Date</label><label class="data-label" flex>  :{{wrapper.passportExpiryDateMMM}}</label>
+                    </div>
+
+                    <md-divider></md-divider>
+
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>Passport Issue Place</label><label class="data-label" flex>  :{{wrapper.passportIssuePlace}}</label>
+                    </div>
+
+    -->
+
+        <div class="subhead-label">
+
+                        Contact Details
+        </div>
+        
+  
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>Mobile 1</label><label class="data-label" flex>  :{{wrapper.primaryMobile}}</label>
+                    </div>
+
+                    <md-divider></md-divider>
+
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>Mobile 2</label><label class="data-label" flex>  :{{wrapper.secondaryMobile}}</label>
+                    </div>
+
+
+                    <md-divider></md-divider>
+
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>e-mail 1</label><label class="data-label" flex>  :{{wrapper.primaryEmail}}</label>
+                    </div>
+
+
+                    <md-divider></md-divider>
+
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>e-mail 2</label><label class="data-label" flex>  :{{wrapper.secondaryEmail}}</label>
+                    </div>
+
+        <div class="subhead-label">
+
+            Parent Details
+
+        </div>
+
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>Father Name</label><label class="data-label" flex>  :{{wrapper.fatherName.slice(0,20)}}</label>
+                    </div>
+
+                    <md-divider></md-divider>
+
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>Father Surname</label><label class="data-label" flex>  :{{wrapper.fatherSurname.slice(0,20)}}</label>
+                    </div>
+
+
+                    <md-divider></md-divider>
+
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>Father Education</label><label class="data-label" flex>  :{{wrapper.fatherEducationValue}}</label>
+                    </div>
+
+
+                    <md-divider></md-divider>
+
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>Father Occupation</label><label class="data-label" flex>  :{{wrapper.fatherOccupationValue}}</label>
+                    </div>
+
+
+                    <md-divider></md-divider>
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>Father Aaadhaar</label><label class="data-label" flex>  :{{wrapper.fatherAadhaarNo}}</label>
+                    </div>
+
+                    <md-divider></md-divider>
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>Annual Income</label><label class="data-label" flex>  :{{wrapper.parentAnnualIncome}}</label>
+                    </div>
+
+                    <md-divider></md-divider>
+
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>Mother Name</label><label class="data-label" flex>  :{{wrapper.motherName.slice(0,20)}}</label>
+                    </div>
+
+                    <md-divider></md-divider>
+
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>Mother Surname</label><label class="data-label" flex>  :{{wrapper.motherSurname.slice(0,20)}}</label>
+                    </div>
+
+
+                    <md-divider></md-divider>
+
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>Mother Education</label><label class="data-label" flex>  :{{wrapper.motherEducationValue}}</label>
+                    </div>
+
+                    <md-divider></md-divider>
+
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>Mother Occupation</label><label class="data-label" flex>  :{{wrapper.motherOccupationValue}}</label>
+                    </div>
+
+                    <md-divider></md-divider>
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>Mother Aaadhaar</label><label class="data-label" flex>  :{{wrapper.motherAadhaarNo}}</label>
+                    </div>
+
+        <div class="subhead-label">
+
+            Present Address
+        </div>
+
+
+
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>Address-1 </label>:<label class="data-label" flex>  {{wrapper.address1.slice(0,20)}}</label>
+                    </div>
+
+                    <md-divider></md-divider>
+
+
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>Address-2 </label>:<label class="data-label" flex>  {{wrapper.address2.slice(0,20)}}</label>
+                    </div>
+
+                    <md-divider></md-divider>
+
+
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>Address-3 </label>:<label class="data-label" flex>  {{wrapper.address3.slice(0,20)}}</label>
+                    </div>
+
+                    <md-divider></md-divider>
+
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>City </label>:<label class="data-label" flex>  {{wrapper.cityIDValue}}</label>
+                    </div>
+
+
+                    <md-divider></md-divider>
+
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>Pincode </label>:<label class="data-label" flex>  {{wrapper.pinCode}}</label>
+                    </div>
+
+
+                    <md-divider></md-divider>
+
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>District </label>:<label class="data-label" flex>  {{wrapper.districtIDValue}}</label>
+                    </div>
+
+                    <md-divider></md-divider>
+
+
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>State</label><label class="data-label" flex>  :{{wrapper.stateIDValue}}</label>
+                    </div>
+
+
+        <div class="subhead-label">
+
+            Permanent Address
+        </div>
+
+
+
+
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>Address-1 </label>:<label class="data-label" flex>  {{wrapper.permAddress1.slice(0,20)}}</label>
+                    </div>
+
+                    <md-divider></md-divider>
+
+
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>Address-2 </label>:<label class="data-label" flex>  {{wrapper.permAddress2.slice(0,20)}}</label>
+                    </div>
+
+
+                    <md-divider></md-divider>
+
+
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>Address-3 </label>:<label class="data-label" flex>  {{wrapper.permAddress3.slice(0,20)}}</label>
+                    </div>
+
+                    <md-divider></md-divider>
+
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>City </label>:<label class="data-label" flex>  {{wrapper.cityIDValue}}</label>
+                    </div>
+
+
+
+                    <md-divider></md-divider>
+
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>Pincode </label>:<label class="data-label" flex>  {{wrapper.permPINCode}}</label>
+                    </div>
+
+
+                    <md-divider></md-divider>
+
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>District </label>:<label class="data-label" flex>  {{wrapper.districtIDValue}}</label>
+                    </div>
+
+                    <md-divider></md-divider>
+
+
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>State</label><label class="data-label" flex>  :{{wrapper.stateIDValue}}</label>
+                    </div>
+
+
+        <div class="subhead-label">
+
+            Transport Details
+        </div>
+
+
+
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>Bus Route No</label>:<label class="data-label" flex>  {{wrapper.busRouteNoValue}}</label>
+                    </div>
+
+                    <md-divider></md-divider>
+
+
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>Pickup Point</label><label class="data-label" flex>  :{{wrapper.busPickupPointValue}}</label>
+                    </div>
+
+
+                    <md-divider></md-divider>
+
+
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>Driver Name-1</label><label class="data-label" flex>  :{{wrapper.driverName.slice(0,20)}}</label>
+                    </div>
+
+
+                    <md-divider></md-divider>
+
+
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>Driver Mobile</label><label class="data-label" flex>  :{{wrapper.driverMobileNo}}</label>
+                    </div>
+
+
+                    <md-divider></md-divider>
+
+
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>Driver Name-2</label><label class="data-label" flex>  :{{wrapper.driverName2.slice(0,20)}}</label>
+                    </div>
+
+
+                    <md-divider></md-divider>
+
+
+                    <div class="form-group required" layout="row" flex>
+                        <label class="field-label" flex>Driver Mobile</label><label class="data-label" flex>  :{{wrapper.driverMobileNo2}}</label>
+                    </div>
+            </md-list>
+              
+           </md-content>
+
+            </div>
+         </div>
+        </md-card>
+
+
+</div>
+
+	
+
+ 			

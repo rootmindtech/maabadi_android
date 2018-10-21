@@ -1,0 +1,154 @@
+
+<div  ng-controller="studentsAttendanceController" ng-init="fetchAttendanceByStudent()" ng-cloak flex>
+
+    <div layout="row" class="toolbar" class="view-animate">
+
+
+                <div>
+                    <button layout="column" flex class="left-toolbar" ng-click="backToDashBoard('dashBoard')">
+                        
+                        <img src="app/images/back.png">
+                            
+                            </button>
+                </div>
+
+
+                <div layout="column" flex align="center" class="top-label-toolbar">
+
+                        <label >{{studentTitleName}} </label>
+
+                        <div flex align="center" class="bottom-label-toolbar">
+
+                            <label class="bottom-label-toolbar">Student attendance</label>
+
+                        </div>
+
+                </div>
+
+                <div layout="column" flex class="right-toolbar" ng-click="logout()">
+
+                       <!-- <img src="app/images/menu.png">-->
+                        <img class="png-icon" src="app/images/logout.png">
+                </div>
+
+
+    </div>
+
+    <md-card>
+
+            <div class="rounded-corners">
+
+
+
+                <label class="field-label" >Academic Year</label><label class="data-label" flex>: {{academicYearIDValue}} </label>
+
+
+                <label class="field-label"  >Class</label><label class="data-label" flex>: {{gradeIDValue}} </label>
+
+
+
+                <label class="field-label"  >Section</label><label class="data-label" flex>: {{sectionIDValue}} </label>
+
+
+            </div>
+
+
+           <!-- <div ng-repeat="(key, value) in wrapper | groupBy: 'calendarDate'">
+
+
+                <div class="subhead-label" ng-show="!wrapper.length">
+
+                    <label >No info available</label>
+                </div>
+
+                <div class="subhead-label">
+                    {{value[0].calendarDateMMM}}
+                </div>
+
+                <table class="table table-striped table-hover table-bordered">
+                    <thead>
+                    <tr>
+
+                        <th align="center" class="table-header">Morning</th>
+                        <th align="center" class="table-header">Evening</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="wrapper in value">
+
+                        <td class="attendance-present" ng-if="wrapper.morningStatus=='P'">Present</td>
+                        <td class="attendance-absent" ng-if="wrapper.morningStatus=='A'">Absent</td>
+
+                        <td class="attendance-present" ng-if="wrapper.eveningStatus=='P'">Present</td>
+                        <td class="attendance-absent" ng-if="wrapper.eveningStatus=='A'">Absent</td>
+
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        -->
+
+
+            <!--<div ng-repeat="(key, value) in wrapper | groupBy: 'calendarDate'">-->
+           <!-- <div class="subhead-label">
+
+                <label align="center" class="label">Date</label>
+                <label align="center" class="label">Morning</label>
+                <label align="center" class="label">Evening</label>
+
+            </div>-->
+           
+       <div ><!--class="wrap"-->
+           <div id="chatWindow" class="container-parent">
+               
+               
+               <md-content>
+                   <md-list>
+                       
+                           <div class="subhead-label">
+                               Attendance
+                           </div>
+       
+                            <table class="table table-striped table-hover table-bordered">
+
+                                    <thead>
+                                    <tr>
+                                        <th align="center" class="table-header">Date</th>
+                                        <th align="center" class="table-header">Morning</th>
+                                        <th align="center" class="table-header">Evening</th>
+
+                                    </tr>
+
+
+                                    </thead>
+
+                                    <tbody>
+
+
+                                    <tr ng-repeat="list in wrapper | orderBy: '-calendarDateMMM'">
+
+
+                                        <td class="attendance-date"> {{list.calendarDateMMM}}</td>
+
+                                        <td class="attendance-present" ng-if="list.morningStatus=='P'">Present</td>
+                                        <td class="attendance-absent" ng-if="list.morningStatus=='A'">Absent</td>
+
+                                        <td class="attendance-present" ng-if="list.eveningStatus=='P'">Present</td>
+                                        <td class="attendance-absent" ng-if="list.eveningStatus=='A'">Absent</td>
+
+                                    </tr>
+                                    </tbody>
+
+                        </table>
+                    </md-list>
+                </md-content>
+
+            </div>
+        </div>
+           <!-- </div>-->
+
+    </md-card>
+
+</div>

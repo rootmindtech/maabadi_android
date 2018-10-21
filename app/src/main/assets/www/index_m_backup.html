@@ -1,0 +1,255 @@
+
+<html lang="en" ng-app="schoolApp">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=0" />
+	<meta http-equiv="Content-Security-Policy" content="img-src 'self' data:; default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
+
+	<!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+      <meta name="format-detection" content="telephone=no">
+      <meta name="msapplication-tap-highlight" content="no">-->
+
+	<title>SchoolApp</title>
+
+
+
+	<link rel="stylesheet" href="app/css/app_m.css">
+
+	<link rel="stylesheet" href="app/css/angular-material.min.css">
+
+	<link rel="stylesheet" href="app/css/bootstrap.min.css">
+
+	<!-- CSS -->
+
+
+	<script type="application/x-javascript">
+			  addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
+			  document.addEventListener('backbutton', function(event){
+			  event.preventDefault(); // EDIT
+			  navigator.app.exitApp(); // exit the app
+		});
+	</script>
+
+	<!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,300,600,700' rel='stylesheet' type='text/css'>-->
+
+
+	</head>
+
+	<body oncontextmenu="return false" layout="row" ng-controller="appController_m" ng-cloak>  <!--  -->
+
+
+					<div id="mySidenav" class="sidenav" >
+
+
+										<div class="sidenav-listitems">
+
+											<div class="loginDate">{{lastLoginDate}}</div>
+											<div><div class="loginDate">v 1.0.4</div><a class="closebtn" ng-click="closeNav()">×</a></div>
+										</div>
+
+
+										<md-divider></md-divider>
+
+										<div class="sidenav-listitems" ng-click="navActivityMode('UPDATE','dashBoard')" flex>
+
+
+											<img class="png-icon" src="app/images/logo.png"> dashboard
+
+										</div>
+										<md-divider></md-divider>
+
+										<div class="sidenav-listitems" ng-click="navActivityMode('UPDATE','studentProfile')" flex>
+
+
+											<img class="png-icon" src="app/images/studentprofile.png" style="width: 24px; height: 24px;"> student profile
+
+										</div>
+
+										<md-divider></md-divider>
+
+										<div class="sidenav-listitems" ng-click="navActivityMode('UPDATE','studentAcademics')" flex>
+
+											<img class="png-icon" src="app/images/studentacademics.png" style="width: 24px; height: 24px;">   student academics
+										</div>
+
+										<md-divider></md-divider>
+
+										<div class="sidenav-listitems" ng-click="navActivityMode('UPDATE','studentDiary')" >
+
+											<img class="png-icon" src="app/images/studentdiary.png" style="width: 24px; height: 24px;">   student diary
+										</div>
+
+										<md-divider></md-divider>
+
+										<div class="sidenav-listitems" ng-click="navActivityMode('UPDATE','reports')" >
+
+											<img class="png-icon" src="app/images/studentreports.png" style="width: 24px; height: 24px;">   reports
+										</div>
+										<md-divider></md-divider>
+
+										<div class="sidenav-listitems" ng-click="navActivityMode('UPDATE','schoolMessage')" >
+
+											<img class="png-icon" src="app/images/schoolmessage.png" style="width: 24px; height: 24px;">   school message
+										</div>
+
+										<md-divider></md-divider>
+
+										<div class="sidenav-listitems" ng-click="navActivityMode('UPDATE','examCalendar')" >
+
+											<img class="png-icon" src="app/images/studentcalendar.png" style="width: 24px; height: 24px;">   exam calendar
+										</div>
+
+										<md-divider></md-divider>
+
+										<div class="sidenav-listitems" ng-click="navActivityMode('UPDATE','studentSubjects')" >
+
+											<img class="png-icon" src="app/images/studentsubjects.png" style="width: 24px; height: 24px;">   subjects
+										</div>
+
+										<md-divider></md-divider>
+
+										<div class="sidenav-listitems" ng-click="navActivityMode('UPDATE','studentAttendance')" >
+
+											<img class="png-icon" src="app/images/studentattendance.png" style="width: 24px; height: 24px;">  attendance
+										</div>
+
+										<md-divider></md-divider>
+
+										<div class="sidenav-listitems" ng-click="navActivityMode('UPDATE','teachersProfile')" >
+
+											<img class="png-icon" src="app/images/studentprofile.png" style="width: 24px; height: 24px;">   teachers profile
+										</div>
+
+										<md-divider></md-divider>
+
+										<div class="sidenav-listitems" ng-click="navActivityMode('UPDATE','parentMessage')" >
+
+											<img class="png-icon" src="app/images/schoolmessage.png" style="width: 24px; height: 24px;">   parent message
+										</div>
+
+										<md-divider></md-divider>
+
+										<div class="sidenav-listitems" ng-click="navActivityMode('UPDATE','changePassword')" >
+
+											<img class="png-icon" src="app/images/changepassword.png" style="width: 24px; height: 24px;">   change password
+										</div>
+
+										<md-divider></md-divider>
+
+
+					</div>
+
+
+					<div id="main">
+
+									<div class="view-animate-container">
+											<div  ng-view class="view-animate"></div>
+									</div>
+									<!--<div id="veil" ng-show="loading"></div>-->
+									<div id="feedLoading" ng-show="loading"><img src="app/images/loader.gif" /></div>
+
+					</div>
+
+
+		<script type="text/javascript" src="cordova.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+
+		<script type="text/javascript">
+						app.initialize();
+		</script>
+
+		<!--<script type="text/javascript" src="js/Camera.js"></script>
+		<script type="text/javascript" src="js/CameraConstants.js"></script>
+		<script type="text/javascript" src="js/CameraPopoverHandle.js"></script>
+		<script type="text/javascript" src="js/CameraPopoverOptions.js"></script>-->
+
+		<!-- Angular Material Dependencies -->
+
+		<script src="app/js/angular.min.js"></script>
+
+		<script src="app/js/angular-route.js"></script>
+
+		<script src="app/js/angular-animate.min.js"></script>
+
+		<script src="app/js/angular-aria.min.js"></script>
+
+		<script src="app/js/angular-material.min.js"></script>
+
+		<script src="app/js/angular-material-icons.min.js"></script>
+
+		<script src="app/js/ui-bootstrap-tpls-1.2.5.min.js"></script>
+
+		<script src="app/js/angular-sanitize.js"></script>
+
+		<script  type="text/javascript" src="app/js/xeditable.js"></script>
+
+		<script  type="text/javascript" src="app/js/canvasjs.min.js"></script>
+
+
+		<!--<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/aes.js"></script>-->
+
+		<!--<script  src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular-sanitize.js"></script>-->
+
+
+		<!--<script type='text/javascript' src="app/js/CryptoJSCipher.js"></script>
+		<script type='text/javascript' src="app/js/angularjs-crypto.js"></script>
+		<script type='text/javascript' src="app/js/aes.js"></script>
+		<script type='text/javascript' src="app/js/mode-ecb.js"></script>-->
+
+		<!--<script type='text/javascript' src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/aes.js"></script>-->
+		<!--<script type='text/javascript' src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/components/mode-ecb.js"></script>-->
+		<!--<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/components/pad-nopadding-min.js"></script>-->
+
+
+		<script  type="text/javascript" src="app/js/angular-filter.min.js"></script>
+
+		<!--  -->
+
+
+<!--  -->
+		<script src="app/app_m.js"></script>
+
+
+		<!-----------Common controls ------>
+
+		<script type="text/javascript" src="app/controllers_m/appController_m.js"></script>
+		<script type="text/javascript" src="app/controllers/connectHost.js"></script>
+		<script type="text/javascript" src="app/controllers/connectHostImage.js"></script>
+		<script type="text/javascript" src="app/controllers/alertsManager.js"></script>
+		<script type="text/javascript" src="app/controllers/appConstants.js"></script>
+		<script type="text/javascript" src="app/controllers/commonControls.js"></script>
+		<script type="text/javascript" src="app/controllers_m/messageFactory_m.js"></script>
+		<script type="text/javascript" src="app/controllers/sharedProperties.js"></script>
+		<script type="text/javascript" src="app/controllers/userAuth.js"></script>
+		<script type="text/javascript" src="app/controllers_m/loginController_m.js"></script>
+		<script type="text/javascript" src="app/controllers/loginProfileController.js"></script>
+
+		<script  type="text/javascript" src="app/js/fileModel.js"></script>
+
+	    <script type="text/javascript" src="app/controllers/studentProfileController.js"></script>
+		<script type="text/javascript" src="app/controllers/studentAcademicsController.js"></script>
+		<script type="text/javascript" src="app/controllers/studentDiaryController.js"></script>
+		<script type="text/javascript" src="app/controllers/studentMessageController.js"></script>
+		<script type="text/javascript" src="app/controllers/gradeSubjectsController.js"></script>
+		<script type="text/javascript" src="app/controllers/examCalendarController.js"></script>
+		<script type="text/javascript" src="app/controllers/schoolMessageController.js"></script>
+		<script type="text/javascript" src="app/controllers/studentsAttendanceController.js"></script>
+
+		<script type="text/javascript" src="app/controllers/imageUploadController.js"></script>
+		<script type="text/javascript" src="app/controllers/imageViewController.js"></script>
+		<script type="text/javascript" src="app/controllers/masterController.js"></script>
+		<script type="text/javascript" src="app/controllers/queueController.js"></script>
+
+		<script type="text/javascript" src="app/controllers/graphController.js"></script>
+		<script type="text/javascript" src="app/controllers/studentChartController.js"></script>
+		<script type="text/javascript" src="app/controllers/teachersProfileController.js"></script>
+		<script type="text/javascript" src="app/controllers/parentMessageController.js"></script>
+
+
+
+		<!-- Common controls end -->
+
+</body>
+</html>

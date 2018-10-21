@@ -1,0 +1,90 @@
+
+<div  ng-controller="gradeSubjectsController" ng-init="fetchGradeSubjects_M()" ng-cloak flex>
+
+
+    <div layout="row" class="toolbar" class="view-animate">
+
+
+        <div>
+            <button layout="column" flex class="left-toolbar" ng-click="backToDashBoard('dashBoard')">
+                
+                <img src="app/images/back.png">
+                    
+                    </button>
+        </div>
+
+
+        <div layout="column" flex align="center" class="top-label-toolbar">
+
+            <label >{{studentTitleName}} </label>
+
+            <div flex align="center" class="bottom-label-toolbar" >
+
+                <label class="bottom-label-toolbar">Student subjects</label>
+
+            </div>
+
+        </div>
+
+        <div layout="column" flex class="right-toolbar" ng-click="logout()">
+
+           <!-- <img src="app/images/menu.png">-->
+            <img class="png-icon"  src="app/images/logout.png">
+        </div>
+
+
+    </div>
+
+    <md-card>
+
+                <div class="rounded-corners">
+
+
+
+                    <label class="field-label" >Academic Year</label><label class="data-label" flex>: {{academicYearIDValue}} </label>
+
+
+                    <label class="field-label"  >Class</label><label class="data-label" flex>: {{gradeIDValue}} </label>
+
+
+
+                    <label class="field-label"  >Section</label><label class="data-label" flex>: {{sectionIDValue}} </label>
+
+
+                </div>
+
+            <div class="wrap">
+                <div id="chatWindow" class="container-parent">
+                    
+                    
+                    <md-content>
+                        <md-list>
+                            
+                            <div class="subhead-label">
+                                Subjects
+                            </div>
+
+                                <md-list ng-repeat="list in subjectsWrapper">
+
+
+                                        <div class="subhead-label" ng-if="{{subjectsWrapper.length<0}}">
+
+                                                No info available
+                                        </div>
+
+
+                                        <div class="schoolmessage">{{$index + 1}}.  {{list.subjectIDValue}}</div>
+
+                                        <md-divider></md-divider>
+
+                                </md-list>
+                            </md-list>
+                        </md-content>
+                    </div>
+                </div>
+
+               <!-- </div>-->
+
+    </md-card>
+
+</div>

@@ -1,0 +1,43 @@
+{
+  "project_info": {
+    "project_id": "school-1258",
+    "project_number": "55941922715",
+    "name": "School"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:55941922715:android:e22e0751af805da6",
+        "client_id": "android:com.rootmind.school",
+        "client_type": 1,
+        "android_client_info": {
+          "package_name": "com.rootmind.school",
+          "certificate_hash": []
+        }
+      },
+      "oauth_client": [],
+      "api_key": [],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "cloud_messaging_service": {
+          "status": 2,
+          "apns_config": []
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "google_signin_service": {
+          "status": 1
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "client_info": [],
+  "ARTIFACT_VERSION": "1"
+}

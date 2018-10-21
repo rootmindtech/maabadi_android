@@ -1,0 +1,807 @@
+
+/* 
+.main-toolbar {
+  Put top toolbar on a higher layer than sidenav, which has z-index: 60
+  
+  z-index: 61;
+  ..Not really needed unless you want the menu
+     to be overlapped by the top bar, which it is
+     not currently, thanks to "display: block" and            "position: relative"
+  Cosmetic
+  
+  background-color: green;
+} */
+
+/* 
+light blue  color:#0080ff;
+Apple blue color:#005DB3;
+
+ */
+/*form{
+	margin-top: 5px; 
+	margin-bottom: 0px;
+}
+ */
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+.mdtabs{
+	width:80%;
+	margin-left: 100px;
+}
+
+.mdTabCardSize{
+	 height: 100%; 
+ 	 width:100%; 
+ 	 margin-left: 0px;
+ 	}
+ 	
+
+.mdTabCardSize .card-list{
+
+	background: #005DB3;
+	color: white;
+  
+} 	
+
+md-tab{
+   	
+   	font-size: 1.3em; 
+   	font-style: normal;
+    font-weight: normal;	
+    text-transform: none;
+    /* background-color:  #005DB3 !important; */
+    background-color:#ffffff;
+    color: white;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	padding: 5px 10px 30px 10px;
+  	/* height: 12px;
+  	width:40%; */
+  	border-radius: 5px;
+}
+
+
+md-button {
+  
+   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   font-style: normal;
+   font-size: 1.0em; /* 40px/16=2.5em */
+   font-weight: normal;	
+   text-transform: lowercase;
+   text-decoration:none;
+   margin-top: 10px; 
+   
+   
+}
+
+
+
+.logout-button {
+   /*  color: #0266C8; */
+    color: #ffffff;
+   /*  max-width:66%; */
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-style: normal;
+    /* font-variant: small-caps; */
+    text-transform:none;           /* capitalize; */
+    font-size: 1.3em; /* 40px/16=2.5em */
+   /*  font-weight: bold; */
+    background-color:#E50053;
+  	height: auto;
+  	width:auto;
+  	border-radius: 5px;
+  	/* width:auto; */
+   
+}
+   
+md-content.md-default-theme {
+  background-color: #eee;
+}
+
+md-card {
+  background-color: #ffffff;
+  
+}
+md-card h2:first-of-type {
+  margin-top: 0;
+ 
+}
+
+md-toolbar .md-button.md-default-theme {
+  border-radius: 99%;
+}
+
+h2 {
+  font-weight: 400;
+}
+
+.md-toolbar-tools-bottom {
+  font-size: small;
+}
+.md-toolbar-tools-bottom :last-child {
+  opacity: 0.8;
+}
+
+md-toolbar:not(.md-hue-1),
+.md-fab {
+  fill: #fff;
+}
+
+md-sidenav {
+  fill: #737373;
+}
+md-sidenav ng-md-icon {
+  position: relative;
+  top: 5px;
+}
+
+.user-avatar {
+  border-radius: 99%;
+}
+.face {
+  border-radius: 30px;
+  border: 1px solid #ddd;
+  display: inline-block;
+  margin: 4px 16px; 
+  vertical-align: middle;
+  width: 48px;
+}
+
+form {
+	
+	margin-left: 30px;
+	margin-top: 10px;
+	padding: 10px 10px 10px 10px;
+
+}
+
+
+.subhead-label {
+   /*  color: #0266C8; */
+    color: #ffffff;
+   /*  max-width:66%; */
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-style: normal;
+    /* font-variant: small-caps; */
+    text-transform:none;           /* capitalize; */
+    font-size: 1.3em; /* 40px/16=2.5em */
+   /*  font-weight: bold; */
+    background-color:#005DB3;
+  	padding: 5px 10px 30px 10px;
+  	height: 12px;
+  	border-radius: 5px;
+  	margin-bottom: 15px;
+    /* width:auto; */
+   
+}
+
+
+.header-label {
+	
+	
+    text-align:center;
+   /*  color: #0266C8; */
+    color: #005DB3;
+   /*  max-width:66%; */
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-style: normal;
+    /* font-variant: small-caps; */
+    text-transform:none;           /* capitalize; */
+    font-size: 1.3em; /* 40px/16=2.5em */
+   /*  font-weight: bold; */
+    background-color:#ffffff;
+  	padding: 5px 10px 30px 10px;
+  	height: 12px;
+  	width:40%;
+  	border-radius: 5px;
+  	margin-bottom: 15px;
+  	/*  white-space: nowrap; */
+    /* width:auto; */
+   
+}
+
+.ref-label {
+   /*  color: #0266C8; */
+    color: #ffffff;
+   /*  max-width:66%; */
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-style: normal;
+    /* font-variant: small-caps; */
+    text-transform:none;           /* capitalize; */
+    font-size: 1.3em; /* 40px/16=2.5em */
+   /*  font-weight: bold; */
+    background-color:#E50053;
+  	padding: 5px 10px 33px 10px;
+  	height: 20px;
+  	width:300px;
+  	border-radius: 5px;
+  	margin-bottom: 15px;
+    /* width:auto; */
+   
+}
+
+
+.ref-customer-label {
+   /*  color: #0266C8; */
+    color: #ffffff;
+   /*  max-width:66%; */
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-style: normal;
+    /* font-variant: small-caps; */
+    text-transform:none;           /* capitalize; */
+    font-size: 1.3em; /* 40px/16=2.5em */
+   /*  font-weight: bold; */
+    background-color:#E50053;
+  	padding: 5px 10px 33px 10px;
+  	height: 50px;
+  	width:300px;
+  	border-radius: 5px;
+  	margin-bottom: 15px;
+  	
+    /* width:auto; */
+   
+}
+
+ .customer {
+    color: #ffffff;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-style: normal;
+    text-transform:none;           /* capitalize; */
+    font-size: 0.6em; /* 40px/16=2.5em */
+   /*  font-weight: bold; */
+   
+}
+
+.errormsg-label {
+   /*  color: #0266C8; */
+    color: #ff0000;
+   /*  max-width:66%; */
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-style: normal;
+    /* font-variant: small-caps; */
+    text-transform: capitalize;
+    font-size: 1.0em; /* 40px/16=2.5em */
+   /*  font-weight: bold; */
+    background-color:#c0c0c0;
+  	padding: 3px;
+  	height: 25px;
+  	border-radius: 5px;
+  	margin-bottom: 15px;
+    /* width:auto; */
+   
+}
+.form-group.required .field-label {
+    color: #000000;
+    max-width:66%;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-style: normal;
+    font-size: 1.0em; /* 40px/16=2.5em */
+    font-weight: normal;
+   
+}
+.form-group.required input[type=text]
+ { max-width:66%; }
+
+.form-group.required input[type=button]
+ { max-width:35%; 
+   background-color:#005DB3;
+   color:#f8f8f8; 
+ }
+
+.form-group.required select{
+   max-width:66%;
+}
+
+.form-group.required .mandatory-label { 
+    color: #000000;
+    max-width:66%;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-style: normal;
+    font-size: 1.0em; /* 40px/16=2.5em */
+    font-weight: normal;
+   
+   
+}
+.form-group.required .mandatory-label:after { 
+   content:"*";
+   color:red;
+   
+}
+.form-group.required .input-group input[type=text]{
+	max-width:66%;
+}
+
+
+/* image upload */
+.cropArea {
+    background: #E4E4E4;
+    overflow: hidden;
+    width:500px;
+    height:350px;
+}
+form .progress {
+    line-height: 15px;
+}
+.progress {
+    display: inline-block;
+    width: 100px;
+    border: 3px groove #CCC;
+}
+.progress div {
+    font-size: smaller;
+    background: orange;
+    width: 0;
+}
+
+
+
+.vertical{   
+    box-shadow: 0 10px 10px rgba(0,0,0,0.3);    
+}
+
+.horizontal{
+    box-shadow: 0 -10px 10px rgba(0,0,0,0.3);    
+}
+
+
+[class*='-apple'] {
+	background-color:#005DB3;
+    color:#f8f8f8; 
+    
+}
+
+/*  end */
+
+
+ .textbox { 
+    -webkit-border-radius: 5px; 
+    -moz-border-radius: 5px; 
+    border-radius: 5px; 
+    border: 1px solid #848484; 
+    outline:0; 
+    height:25px; 
+    width: 275px;
+ }
+ 
+/* Toolbar styles*/
+/* 
+.tabcolor li.active a,
+.tabcolor li.active a:hover,
+.tabcolor li.active a:focus
+ {
+	
+    background-color:  #005DB3 !important;
+    color: white !important;
+}
+ */
+ 
+ .nav-tabs{
+ 
+   white-space: nowrap;
+   overflow-x: auto;
+   overflow-y: hidden;
+   min-height: 46px;
+}
+
+.nav-tabs > li > a{
+  border: medium none;
+}
+
+.nav-tabs > li > a:hover{
+    background-color:  #005DB3 !important;
+    border: medium none;
+    border-radius: 0;
+    color: white !important;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:hover{
+    background-color:  #005DB3 !important;
+    color: white !important;
+}
+
+.nav-tabs > li {
+ float: none;
+ display: inline-block;
+  color: white !important;
+}
+
+/* .nav-pills > li.active > a, .nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+    background-color:  #005DB3 !important;
+}
+ */
+
+
+.form-btn.required .dashboard-btn{
+	
+	
+   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   font-style: normal;
+   font-size: 1.5em; /* 40px/16=2.5em */
+   font-weight: normal;	
+   background-color:#005DB3;
+   color:#f8f8f8; 
+   width: 70% !important;
+   height: 78px !important;
+   border-radius: 10px;
+   margin-left: 30px;
+   margin-top: 30px;
+   margin-bottom: 30px;
+   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+   
+}
+ 
+
+
+ /*deposit portfolio buttons*/
+.form-btn.required .deposit-portfolio-btn{
+	
+	
+   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   font-style: normal;
+   font-size: 1.5em; /* 40px/16=2.5em */
+   font-weight: normal;	
+   background-color:#005DB3;
+   color:#f8f8f8; 
+   width: 60% !important;
+   /* height: 80% !important; */
+   
+   height: auto !important;
+   border-radius: 10px;
+   margin-left: 30px;
+   margin-top: 30px;
+   margin-bottom: 30px;
+   
+}
+
+
+
+
+
+#img{
+   /*  max-width: 80%;
+    max-height: 400px; */
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 1px solid red;
+    display: inline-block;
+}
+
+/* @media only screen and (min-device-width: 400px) {
+    #img{
+    max-width: 100%;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 1px solid blue;
+    display: inline-block;
+	}
+} */
+
+
+.dialogdemoBasicUsage #popupContainer {
+  position: relative; }
+  
+  
+#buttonReject {
+    background-color: #005DB3;
+    border: none;
+    color: white;
+    padding: 11px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+   	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    border-radius: 7px;
+}
+
+#buttonReject:hover {
+    background: #005DB3;
+    color: #000000;
+    cursor: pointer;
+}
+
+
+#container {
+	position: fixed;
+	width: 380px;
+	height: 320px;
+	top: 50%;
+	left: 50%;
+	margin-top: -140px;
+	margin-left: -170px;
+	background: #fff;
+	border-radius: 3px;
+	border: 1px solid #ccc;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+	-webkit-animation-name: bounceIn;
+	-webkit-animation-fill-mode: both;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: linear;
+	-moz-animation-name: bounceIn;
+	-moz-animation-fill-mode: both;
+	-moz-animation-duration: 1s;
+	-moz-animation-iteration-count: 1;
+	-moz-animation-timing-function: linear;
+	animation-name: bounceIn;
+	animation-fill-mode: both;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+}
+
+
+.form-group .text-box {
+	display: block;
+	width: 80%;
+	height: 34px;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	-webkit-transition: border-color ease-in-out .15s, box-shadow
+		ease-in-out .15s;
+	transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s
+}
+
+
+.pointer-hand { cursor: pointer; cursor: hand; }
+
+.png-icon{
+    margin: 5px auto auto;
+    padding: 0;
+    display: inline-block;
+    background-repeat: no-repeat no-repeat;
+    pointer-events: none;
+    width: 24px; 
+    height: 24px;
+    background-position:-136px -68px;
+   
+  
+}
+
+.dialogdemoBasicUsage #popupContainer {
+  position: relative; }
+  
+
+
+
+#veil {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height:100%;
+	width:100%;
+	cursor: not-allowed;
+	filter: alpha(opacity=60);
+	opacity: 0.2;
+	background: #ffffff no-repeat center;
+}
+#feedLoading {
+	position: absolute;
+	top:200px;
+	width:100%;
+	text-align: center;
+	font-size: 4em;
+	color:white;
+	text-shadow: 2px 2px 2px #021124;
+}
+  
+  
+.dedup-dialog {
+   
+    width: 90%;
+    height: 80%;
+    border-radius: 0;
+    overflow: scroll;
+    
+}
+
+
+.form-group.required .smallinput-group input[type=text]{
+	max-width:60%;
+	display: inline-block;
+}
+.cardScroll {    
+  /* height: 100%; */ 
+  overflow-y: scroll;
+}
+
+.chartStyle{
+	 height: 100%; 
+	 margin-left: 50px;  
+	/* max-width:90%; */
+}
+
+
+.portfolioCardSize{
+	
+	 height: 100%; 
+ 	 width:80%; 
+ 	 margin-left: 60px; 
+ 	}
+
+.portfolioCardSize .card-list{
+
+	background: #005DB3;
+	color: white;
+  }
+
+.accInfoCard {
+	
+	height: 100%;
+	width:80%;
+	background: #005DB3;
+	color: white;
+	margin-left: 60px;  
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	/* border-radius: 2px;
+ 	display: block;
+  	float: left; */
+	/* border-radius: 30px 30px 30px 30px; */
+	box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+
+
+
+.otpCard{
+	position: absolute;
+    left:0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+	height: 40%;
+	width:50%;
+	border-radius: 2px;
+	display: block;
+	float: left;
+	margin: auto;
+
+	box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+
+
+
+.portfolio-customer-label {
+
+	color: #ffffff;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-style: normal;
+    font-weight: normal;
+    text-transform:none;           /* capitalize; */
+    font-size: 1.7em; /* 40px/16=2.5em */
+}
+
+
+.portfolio-label {
+	
+	color: #ffffff;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-style: normal;
+    font-weight: normal;
+    text-transform:none;           /* capitalize; */
+    font-size: 1.0em; /* 40px/16=2.5em */
+ }
+ /* 
+ .inputbox
+{ 
+	 height:16%; *//*  30px;
+     width:15%;      //240px;
+     
+    display: block;
+    display: inline-block;
+   
+	width: 20%;
+	height: 34px;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	-webkit-transition: border-color ease-in-out .15s, box-shadow
+		ease-in-out .15s;
+	transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s
+    
+} */
+
+.tableCard{
+	height: 50%;
+	width:80%;
+	border-radius: 2px;
+	display: block;
+	margin: auto;
+	box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+ 
+/* 
+.portfolio-label-amount {
+	
+	color: #ffffff;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-style: normal;
+    font-weight: normal;
+    text-transform:none;           capitalize;
+    font-size: 1.3em; 40px/16=2.5em
+ }
+   */
+
+
+/* .tabsControl{
+   
+    width: 100%;
+    height: 100%;
+    border: 1px solid #c3c3c3;
+    display: -webkit-flex; Safari
+    -webkit-flex-wrap: nowrap; Safari 6.1+
+    display: flex;
+    flex-wrap: nowrap;
+  
+}  */
+
+
+
+/* buttons */
+/* .btn {
+    padding: 14px 24px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: none;
+}
+ 
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}
+ 
+.btn-primary {
+    background: #005DB3;
+    color: #ffffff;
+}
+ 
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: #005DB3;
+}
+ 
+.btn-primary:active, .btn-primary.active {
+    background: #005DB3;
+    box-shadow: none;
+}
+
+.btn-primary.raised {
+    box-shadow: 0 3px 0 0 #005DB3;
+}
+
+.btn-primary.raised:active, .btn-primary.raised.active {
+    background: #005DB3;
+    box-shadow: none;
+    margin-bottom: -3px;
+    margin-top: 3px;
+} */
+/*end  buttons */
+
+/* .form-group.required .input-group .btn btn-default button{
+	
+	max-width:5%;
+}
+ */

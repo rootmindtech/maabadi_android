@@ -1,0 +1,76 @@
+<div  ng-controller="appController_m"  ng-cloak flex>
+
+    <div layout="row" class="toolbar" class="view-animate">
+
+
+        <button layout="column" flex class="left-toolbar" ng-click="backToDashBoard('dashBoard')">
+
+            <img src="app/images/back.png">
+
+        </button>
+
+
+        <div layout="column" flex align="center" class="top-label-toolbar">
+
+            <label >{{menuName}} </label>
+
+            <div flex align="center" class="bottom-label-toolbar">
+
+                <label class="bottom-label-toolbar">Student selection</label>
+
+            </div>
+
+        </div>
+
+        <div layout="column" flex class="right-toolbar" ng-click="logout()">
+
+            <!--<img src="app/images/menu.png">-->
+            <img class="png-icon"  src="app/images/logout.png">
+        </div>
+
+
+    </div>
+
+
+    <md-card>
+        
+        <div class="wrap">
+            <div id="chatWindow" class="container-parent">
+                
+                
+                <md-content>
+                    <md-list>
+                        
+                            <md-list class="pointer-hand" ng-repeat="list in studentListWrapper">
+
+                            <div class="subhead-label" ng-show="!studentListWrapper.length">
+
+                                No info available
+                            </div>
+
+                            <md-list-item >
+
+                                <md-item-content ng-click="studentSelection(list.refNo,list.studentID)">
+
+
+                                    <div class="switch-student">
+
+                                            {{list.studentID}}<br>
+                                            {{list.studentName.slice(0,20)}} {{list.surname}}
+
+                                    </div>
+                                </md-item-content>
+                            </md-list-item>
+                           
+
+                        </md-list>
+                         
+                    </md-list>
+                
+            </md-content>
+            </div>
+        </div>
+                
+    </md-card>
+
+</div>

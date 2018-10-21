@@ -1,0 +1,106 @@
+<div ng-controller="studentAcademicsController" ng-init="loadStudentAcademics()" ng-cloak flex>
+    
+    <div layout="row" class="toolbar"  class="view-animate" >
+        
+        
+        <button layout="column" flex class="left-toolbar" ng-click="backToDashBoard('dashBoard')">
+            
+            <img src="app/images/back.png">
+                
+            </button>
+        
+        
+        
+        <div layout="column" flex align="center" class="top-label-toolbar">
+            
+            <label>{{studentTitleName}} </label>
+            
+            <div flex align="center" class="bottom-label-toolbar">
+                
+                <label class="bottom-label-toolbar">Student academics</label>
+                
+            </div>
+            
+        </div>
+        
+        <div layout="column" flex class="right-toolbar" ng-click="logout()">
+            
+            
+            <img class="png-icon" src="app/images/logout.png">
+        </div>
+        
+        
+    </div>
+    
+    <md-card >
+        <div class="rounded-corners">
+            
+            <label class="field-label" >Academic Year</label><label class="data-label" flex>: {{academicYearIDValue}} </label>
+            
+            <label class="field-label"  >Class</label><label class="data-label" flex>: {{gradeIDValue}} </label>
+            
+            <label class="field-label"  >Section</label><label class="data-label" flex>: {{sectionIDValue}} </label>
+            
+        </div>
+        
+        <div class="wrap">
+            <div id="chatWindow" class="container-parent">
+                <md-card>
+                    <md-content>
+                        <md-list>
+                            <div ng-repeat="(key, value) in wrapper | groupBy: 'termIDValue'">
+                                
+                                
+                                <div class="subhead-label" ng-show="!wrapper.length">
+                                    
+                                    No info available
+                                </div>
+                                
+                                
+                                <div class="subhead-label">
+                                    {{ key }}
+                                </div>
+                                
+                                <table class="table table-striped table-hover table-bordered">
+                                    
+                                    <thead>
+                                        <tr>
+                                            <th align="center" class="table-header" style="width:6%">Subject Name</th>
+                                            <th align="center" class="table-header" style="width:5%">Target Marks</th>
+                                            <th align="center" class="table-header" style="width:5%">Secured Marks</th>
+                                            <th align="center" class="table-header" style="width:4%">Percent</th>
+                                            <th align="center" class="table-header" style="width:3%">Rank</th>
+                                            
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr ng-repeat="wrapper in value">
+                                            <!--
+                                             <div class="subhead-label" ng-show="!wrapper.length">
+                                             
+                                             <label >No info available</label>
+                                             </div>-->
+                                            
+                                            <td align="left" style="width:6%">{{wrapper.subjectIDValue}}</td>
+                                            <td align="center" style="width:5%">{{wrapper.targetMarks}}</td>
+                                            <td align="center" style="width:5%">{{wrapper.securedMarks}}</td>
+                                            <td align="center" style="width:4%">{{wrapper.percentage}} </td>
+                                            <td align="center" style="width:3%">{{wrapper.rankIDValue}}</td>
+                                            
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                
+                            </div>
+                        </md-list>
+                    </md-content>
+                </md-card>
+            </div>
+        </div>
+    </md-card>
+    
+    
+</div>
+
+
+

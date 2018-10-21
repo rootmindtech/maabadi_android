@@ -1,0 +1,90 @@
+<div ng-controller="schoolMessageController" ng-init="fetchSchoolMessage()" ng-cloak flex> <!--class="schoolmessage-body"-->
+
+
+	<div layout="row" class="toolbar" class="view-animate">
+
+
+                <div>
+                    <button layout="column" flex class="left-toolbar" ng-click="backToDashBoard('dashBoard')">
+                        
+                        <img src="app/images/back.png">
+                            
+                            </button>
+                </div>
+
+
+				<div layout="column" flex align="center" class="top-label-toolbar">
+
+					<label >{{studentTitleName}} </label>
+
+					<div flex align="center" class="bottom-label-toolbar">
+
+							<label class="bottom-label-toolbar">School message</label>
+
+					</div>
+
+				</div>
+
+				<div layout="column" flex class="right-toolbar" ng-click="logout()">
+
+							<img class="png-icon" src="app/images/logout.png">
+				</div>
+
+
+	</div>
+
+    <md-card>
+            <div class="rounded-corners">
+
+
+                    <label class="field-label" >Academic Year</label><label class="data-label" flex>: {{academicYearIDValue}} </label>
+
+                    <label class="field-label"  >Class</label><label class="data-label" flex>: {{gradeIDValue}} </label>
+
+                    <label class="field-label"  >Section</label><label class="data-label" flex>: {{sectionIDValue}} </label>
+
+
+            </div>
+
+
+        <div class="wrap">
+            
+            <div id="chatWindow" class="container-parent">
+                
+
+                <md-content>
+                   
+                        
+                            <md-list ng-repeat="(key,value) in schoolMessageWrapper | groupBy: 'messageDate'"> <!--| toArray:true | orderBy: -'messageDateTime'-->
+
+
+                                        <div class="subhead-label" >
+                                            {{value[0].messageDate}}
+                                        </div>
+
+
+                                        <div ng-repeat="schoolMessageWrapper in value">
+
+
+
+                                            <label class="schoolmessage"> {{schoolMessageWrapper.message}}</label>
+                                            
+                                            <div class="datetime" align="right"> {{schoolMessageWrapper.messageDateTime.slice(11,20)}}{{" "}}</div>
+
+
+                                            <!--<md-card class="school-messagebox box">
+
+                                                <label class="schoolmessage"> {{schoolMessageWrapper.message}}</label> <div class="datetime" align="right"> {{schoolMessageWrapper.messageDateTime.slice(11,20)}}</div>
+                                             <md-divider></md-divider>
+
+                                            </md-card>-->
+                                            
+                                        </div>
+                                        
+                                </md-list>
+                            
+                </md-content>
+            </div>
+        </div>
+    </md-card>
+</div>

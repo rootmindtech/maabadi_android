@@ -1,0 +1,117 @@
+<div  ng-controller="parentMessageController" ng-init="fetchParentMessage_M()" ng-cloak >
+
+    <div layout="row" class="toolbar">
+
+
+        <button layout="column" flex class="left-toolbar" ng-click="backToDashBoard('dashBoard')">
+
+            <img src="app/images/back.png">
+
+        </button>
+
+
+        <div layout="column" flex align="center" class="top-label-toolbar">
+
+            <label >{{studentTitleName}} </label>
+
+            <div flex align="center" class="bottom-label-toolbar" >
+
+                <label class="bottom-label-toolbar">Parent message</label>
+
+            </div>
+
+        </div>
+
+        <div layout="column" flex class="right-toolbar" ng-click="logout()">
+
+            <!-- <img src="app/images/menu.png">-->
+            <img class="png-icon" src="app/images/logout.png">
+        </div>
+
+
+    </div>
+
+
+
+   <div class="wrap">
+        <div id="chatWindow" class="container-parent">
+
+
+            <div ng-repeat="(key, value) in messageWrapper | groupBy: 'messageDate'">
+
+
+                <div class="schoolmessage-subhead-label">
+                    {{value[0].messageDate}}
+                </div>
+
+
+                <md-list ng-repeat="messageWrapper in value">
+
+                    <div ng-if="messageWrapper.userGroup=='STUDENT'" class="bubble right"><p>{{messageWrapper.message}} <label class="datetime" align="right" >{{messageWrapper.messageDateTime.slice(11,20)}}</label></p> </div>
+                    <div ng-if="messageWrapper.userGroup=='STAFF'" class="bubble left"><p>{{messageWrapper.message}} <label class="datetime" align="right" >{{messageWrapper.messageDateTime.slice(11,20)}}</label></p> </div>
+
+
+                </md-list>
+
+            </div>
+
+
+
+        </div>
+
+        <div class="parent-message">
+
+                <div id="inputWindow" class="form">
+
+                    <input id="inp" type="text" ng-model="wrapper.message" max-length="250" placeholder="Enter your message"/>
+                    <input id="btn" type="button" value="Send" ng-click="saveData_M('STUDENT')" />
+
+                </div>
+        </div>
+    </div>
+
+    <!--<div class="scroll">
+
+        <div class="content">
+
+                <div ng-repeat="(key, value) in messageWrapper | groupBy: 'messageDate'"> &lt;!&ndash;| toArray:true | orderBy: -'messageDateTime'&ndash;&gt;
+
+
+                        <div class="schoolmessage-subhead-label">
+                            {{value[0].messageDate}}
+                        </div>
+
+
+                        <md-list ng-repeat="messageWrapper in value">
+
+
+                            <md-card class="school-messagebox box">
+
+                                <label class="schoolmessage"> {{messageWrapper.message}}</label> <div class="datetime" align="right"> {{messageWrapper.messageDateTime.slice(11,20)}}</div>
+
+
+                            </md-card>
+
+                        </md-list>
+
+                </div>
+        </div>
+    </div>
+
+
+
+  <div >
+
+
+            <div class="parent-message">
+
+                <input type="text" class="input-parentmessage" max-length="250" placeholder="message" id="message" name="message" ng-model="wrapper.message" required ng-disabled="loading"/><span flex></span><img src="app/images/send.png" ng-click="saveData('STUDENT')" />
+
+            </div>
+
+    </div>-->
+
+
+    <!--<div class="parent-message">  <input class="message-input" type="text" ng-model="vm.message" placeholder="message" /> </div><div><img src="app/images/send.png" on-enter="vm.save(vm.message)" /></div>-->
+
+</div>

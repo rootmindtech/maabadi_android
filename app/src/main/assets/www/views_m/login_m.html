@@ -1,0 +1,67 @@
+<div class="login-block no-animate" ng-controller="loginController_m" ng-init="loadData()" ng-cloak>
+
+	<form name="form" id="form" novalidate>
+
+
+				<!-- <div align="center"><img class="login-logo" src="app/images/schoollogo.png"></div> -->
+				<div align="center">
+					<img src="app/images/maabadilogo.png">
+				</div>
+				<div align="center">
+					<h1>my school</h1>
+				</div>
+				<div align="center">
+					<h2>School App</h2>
+				</div>
+
+				<md-card style="background-color: #FFD700" layout="column" layout-align="bottom center">
+						<md-card-content>
+			
+				<div>
+
+					<input type="text" class="input-control" value="" placeholder="UserID@SchoolID" id="username" name="username" maxlength="20"
+					 ng-keypress="disableSpace($event)" ng-model="wrapper.username" required ng-disabled="buttonDisabled" />
+					<label class="login-hint">Demo userid: rajesh@demo, password: demo123 </label>
+
+				</div>
+
+				<div>
+
+					<input type="password" class="input-control" value="" placeholder="Enter password" id="password" name="password" maxlength="20"
+					 ng-keypress="disableSpace($event)" ng-model="wrapper.password" required ng-disabled="buttonDisabled" />
+
+				</div>
+
+
+				<input type="checkbox" name="checkboxFlag" ng-model="wrapper.checkboxFlag" ng-true-value="'Y'" ng-false-value="'N'" ng-disabled="buttonDisabled"
+				/> save password
+				<br>
+
+				<button ng-click="login('STUDENT')" ng-disabled="buttonDisabled" class="primary-button">Log in</button>
+				<!--ng-disabled="form.$invalid || buttonDisabled"-->
+
+				<!--<button type="button" ng-click="schoolRegister()" class="success-button">Register School</button>-->
+				<!--<label class="login-hint">Click on 'Register School' to create and manage school and student profiles (or) goto https://myschool.rootmindtech.com (or) https://maabadi.rootmindtech.com</label>-->
+
+			</md-card-content>
+
+		</md-card>
+
+
+		<div align="center">
+			<img src="app/images/maabadilogo.png">
+		</div>
+		<!--<div align="center"><label class="maabadi-logo">maabadi</label></div>-->
+
+		<div align="center" style="font-size: 0.9em ">v1.0.9</div>
+		<div align="center" style="font-size: 0.7em ">Copyright © 2018 Rootmind TechSoft Private Limited. All rights reserved.</div>
+		<div align="center" style="font-size: 0.7em ">info@rootmindtech.com</div>
+
+		<!-- <div class="footer-label" >
+							Powered By Rootmind TechSoft Pvt Ltd. www.rootmindtech.com
+						</div> -->
+
+	</form>
+
+
+</div>

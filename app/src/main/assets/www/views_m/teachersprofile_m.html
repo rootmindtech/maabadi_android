@@ -1,0 +1,87 @@
+
+
+<div ng-controller="teachersProfileController" ng-init="fetchTeachersProfile();" ng-cloak flex><!--fetchTeachersProfileImage();-->
+
+
+    <div layout="row" class="toolbar" class="view-animate">
+
+
+                <button layout="column" flex class="left-toolbar" ng-click="backToDashBoard('dashBoard')">
+
+                    <img src="app/images/back.png">
+
+                </button>
+
+
+                <div layout="column" flex align="center" class="top-label-toolbar">
+
+                    <label >{{studentTitleName}} </label>
+
+                    <div flex align="center" class="bottom-label-toolbar">
+
+                        <label class="bottom-label-toolbar">Teachers profile</label>
+
+                    </div>
+
+                </div>
+
+                <div layout="column" flex class="right-toolbar" ng-click="logout()">
+
+
+                    <img class="png-icon"  src="app/images/logout.png">
+                </div>
+
+
+    </div>
+
+
+
+    <md-card>
+        
+        <div class="wrap">
+            <div id="chatWindow" class="container-parent">
+                
+                
+                <md-content>
+                    <md-list>
+
+                            <md-list ng-repeat="list in teachersProfileWrapper">
+
+
+                                        <div class="subhead-label" ng-show="!teachersProfileWrapper.length">
+
+                                            No info available
+                                        </div>
+
+                                        <div class="subhead-label">
+                                              {{list.header}}
+                                        </div>
+
+                                        <!--<div ><img class="face" id="img" ng-src="data:image/JPEG;base64,{{imgArray[$index]}}"></div>-->
+
+                                        <div class="teachers">
+
+                                                    <label class="field-label" >Name</label><label class="data-label" flex>: {{list.name}} </label>
+
+
+                                                    <label class="field-label"  >Description</label><label class="data-label" flex>: {{list.description}} </label>
+
+                                                    <label class="field-label"  >E-mail</label><label class="data-label" flex>: {{list.emailID}} </label>
+
+                                        </div>
+
+
+
+                            </md-list>
+                            
+                        </md-list>
+                    </md-content>
+                
+                </div>
+            </div>
+
+    </md-card>
+</div>
+
+
+

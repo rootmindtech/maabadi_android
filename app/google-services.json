@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "787336213564",
+    "firebase_url": "https://maabadi-270cf.firebaseio.com",
+    "project_id": "maabadi-270cf",
+    "storage_bucket": "maabadi-270cf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787336213564:android:0b1302b0e6884ca0",
+        "android_client_info": {
+          "package_name": "com.rootmind.maabadi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "787336213564-gjcofg56lnhpuo14gmbnvvdm781m85gn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rootmind.maabadi",
+            "certificate_hash": "e8d29346d890dcaff99b31e0a60d32bc3cd9a632"
+          }
+        },
+        {
+          "client_id": "787336213564-18lv154d5208358mug0v84052f95dqv6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDskOFOWrzRGMDMVOP-aNgFxAU_ZGFTDnI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "787336213564-18lv154d5208358mug0v84052f95dqv6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
